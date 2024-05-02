@@ -20,9 +20,9 @@ Hay muchos tipos de instancia ec2 variando diferentes componentes como red,cpu,m
 
 Se puede desplega un ec2 de varios metodos esto son :
 
-- Interfaz web (GUI)
-- Terraform
-- Cloudformation
-- SDK
+- Interfaz web (GUI):Accedes a la consola de AWS a través de un navegador web
+- Terraform : herramienta de infraestructura como código (IaC) que te permite definir y gestionar la infraestructura de AWS de manera declarativa
+- Cloudformation : Permite crear y gestionar recursos de manera automatizada utilizando plantillas de infraestructura
+- SDK: (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc. 
 
 ## 
