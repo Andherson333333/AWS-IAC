@@ -28,7 +28,9 @@ Se puede desplega un ec2 de varios metodos esto son :
 ## Creacion EC2 con Cloudformation
 
 1 Crear archivo formato yaml o json
+
 2 Ir a la documentacion AWS cloudformation https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html
+
 3 Verificar los parametros para crear un instancia ec2
 
 Nota:Paramentros principales
@@ -42,8 +44,11 @@ Nota:Paramentros principales
 ## Creacion Terraform
 
 1 Crear la estructura de archivos 
+
 2 Crear archivos que termine .tf
+
 3 Implementar codigo 
+
 4 Desplegar
 
 
