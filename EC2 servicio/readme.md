@@ -25,4 +25,7 @@ Se puede desplega un ec2 de varios metodos esto son :
 - `Cloudformation :` Permite crear y gestionar recursos de manera automatizada utilizando plantillas de infraestructura
 - `SDK:` (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc. 
 
-## 
+## Creacion Cloudformation
+
+## Creacion Terraform
+
