@@ -9,12 +9,12 @@ AWS (Amazon Web Services) es una plataforma de servicios en la nube ofrecida por
 ## Tipos de instancias
 Hay muchos tipos de instancia ec2 variando diferentes componentes como red,cpu,memoria,storage ect dependiendo la variacion cambiara sus nombres . Si necesitas servidores basados en memoria tiene un nombre , si necesitas red tiene otro nombre, tambien hay servidores equilibrado ect .
 
-- T2:	General Purpose (Propósito General)	Desarrollo, pruebas, pequeñas cargas de trabajo
-- C5:	Compute Optimized (Optimizado para Cómputo)	Análisis de datos, procesamiento por lotes
-- R5:	Memory Optimized (Optimizado para Memoria)	Bases de datos en memoria, análisis de datos
-- I3:	Storage Optimized (Optimizado para Almacenamiento)	Bases de datos NoSQL, análisis intensivos en disco
-- P3:	Accelerated Computing (Cómputo Acelerado)	Modelado 3D, aprendizaje profundo (deep learning)
-- H1:	Storage Optimized (Optimizado para Almacenamiento)	Procesamiento de datos en paralelo, análisis de registros
+- `T2:`	General Purpose (Propósito General)	Desarrollo, pruebas, pequeñas cargas de trabajo
+- `C5:`	Compute Optimized (Optimizado para Cómputo)	Análisis de datos, procesamiento por lotes
+- `R5:`	Memory Optimized (Optimizado para Memoria)	Bases de datos en memoria, análisis de datos
+- `I3:`	Storage Optimized (Optimizado para Almacenamiento)	Bases de datos NoSQL, análisis intensivos en disco
+- `P3:`	Accelerated Computing (Cómputo Acelerado)	Modelado 3D, aprendizaje profundo (deep learning)
+- `H1:`	Storage Optimized (Optimizado para Almacenamiento)	Procesamiento de datos en paralelo, análisis de registros
   
 ## Formas de crear un EC2
 
