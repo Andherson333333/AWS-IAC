@@ -41,7 +41,12 @@ Se puede desplega un ec2 de varios metodos esto son :
 
 ## Creacion Terraform
 
-- 1 Crear la estructura de archivos 
+- 1 Crear la estructura de archivos (generlamente esta compuesto por 4 archivos minimo base )
+  - `provider.tf ` Este archivo se utiliza para especificar el proveedor de servicios cloud que se está utilizando
+  - `main.tf` Este es el archivo principal donde se define la mayoría de los recursos.
+  - `outputs.tf` Este archivo se utiliza para definir las salidas que se mostrarán después de que Terraform haya aplicado los cambios
+  - `variables.tf` Este archivo se utiliza para definir las variables que se utilizarán en el archivo main.t
+ 
 - 2 Crear archivos que termine .tf
 - 3 Implementar codigo 
 - 4 Desplegar
