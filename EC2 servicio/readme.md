@@ -49,8 +49,7 @@ Se puede desplega un ec2 de varios metodos esto son :
  
 - 2 Crear archivos que termine .tf
 - 3 Implementar codigo 
-- 4 Desplegar
-    Para desplegar un terraforma se usan a traves de comandos esto son los siguientes :
+- 4 Desplegar (se usan los siguientes comandos:)
     - `terraform init`
     - `terraform plan`
     - `terraform apply`
