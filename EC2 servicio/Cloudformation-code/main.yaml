@@ -1,1 +1,11 @@
-
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-051f8a213df8bc089
+      KeyName: legion33
+      SecurityGroupIds:
+        - sg-00ef3880ebb0de4a3
+      SubnetId: subnet-006c3fe4de694a734
