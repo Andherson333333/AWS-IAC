@@ -23,21 +23,21 @@ Se puede desplega un ec2 de varios metodos esto son :
 - `Interfaz web (GUI):`Accedes a la consola de AWS a través de un navegador web
 - `Terraform :` herramienta de infraestructura como código (IaC) que te permite definir y gestionar la infraestructura de AWS de manera declarativa
 - `Cloudformation :` Permite crear y gestionar recursos de manera automatizada utilizando plantillas de infraestructura
-- `SDK:` (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc. 
+- `SDK:` (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc.
 
-## Creacion EC2 con Cloudformation
-
-- 1 Crear archivo formato yaml o json
-- 2 Ir a la documentacion AWS cloudformation https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html
-- 3 Verificar los parametros para crear un instancia ec2
-
-Nota:Paramentros principales de un ec2
+## Paramentros principales de un ec2
 
 - image-id 
 - instance-type
 - key-name
 - security-group-ids
 - subnet-id
+
+## Creacion EC2 con Cloudformation
+
+- 1 Crear archivo formato yaml o json
+- 2 Ir a la documentacion AWS cloudformation https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html
+- 3 Verificar los parametros para crear un instancia ec2
 
 ## Creacion Terraform
 
