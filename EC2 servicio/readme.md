@@ -7,8 +7,6 @@
 * [Creacion EC2 con Cloudformation](#item6)
 * [Creacion EC2 con Terraform](#item7)
 
-
-
 <a name="item1"></a>
 ## Que es AWS ?
 
