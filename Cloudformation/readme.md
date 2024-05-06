@@ -1,11 +1,20 @@
+## Índice de contenidos
+* [Que es IAC ](#item1)
+* [Que es cloudformation?](#item2)
+* [Beneficios de AWS CloudFormation](#item3)
+* [Conceptos clave de CloudFormation](#item4)
+
+<a name="item1"></a>
 ## Que es IAC ?
 
   La Infraestructura como Código (IaC) es una práctica que consiste en gestionar y provisionar la infraestructura de TI utilizando archivos de código, en lugar de configuraciones manuales. Esto significa que en lugar de realizar tareas de forma manual a través de la consola de administración o interfaces gráficas, se define la infraestructura utilizando lenguajes de programación como YAML o JSON. Luego, herramientas como AWS CloudFormation interpretan estos archivos y crean o modifican los recursos de forma automática en la nube
 
-## Ques cloudformation?
+<a name="item2"></a>
+## Que es cloudformation?
 
   AWS CloudFormation es un servicio de AWS que permite definir y administrar la infraestructura de AWS como código, siguiendo el concepto de IaC. Con CloudFormation, puedes crear y actualizar recursos de forma automatizada y coherente, utilizando plantillas que describen la infraestructura que deseas implementar. Estas plantillas son archivos en formato YAML o JSON que contienen la configuración de los recursos, sus propiedades y relaciones entre ellos.
-  
+
+<a name="item3"></a>  
 ## Beneficios de AWS CloudFormation
 
 - Automatización y consistencia: CloudFormation automatiza el despliegue y la gestión de recursos, garantizando una configuración consistente en todos los entornos.
@@ -14,6 +23,7 @@
 - Escalabilidad: Permite escalar la infraestructura de manera eficiente mediante la definición de recursos y sus configuraciones en las plantillas.
 - Monitoreo simplificado: Facilita el monitoreo y la gestión de la infraestructura al centralizar la configuración en archivos de código.
 
+<a name="item4"></a>
 ## Conceptos clave de CloudFormation
 
 - Plantillas (Templates): Archivos en formato YAML o JSON que describen la infraestructura que se desea implementar.
