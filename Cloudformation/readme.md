@@ -3,6 +3,7 @@
 * [Que es cloudformation?](#item2)
 * [Beneficios de AWS CloudFormation](#item3)
 * [Conceptos clave de CloudFormation](#item4)
+* [](#item5)
 
 <a name="item1"></a>
 ## Que es IAC ?
@@ -34,3 +35,27 @@ Parámetros: Valores que se pueden pasar a la plantilla durante la creación del
 - Referencias: Mecanismos para referenciar otros recursos dentro de la plantilla, estableciendo dependencias y relaciones.
 - Update Policy: Políticas que definen cómo CloudFormation debe manejar actualizaciones en los recursos existentes.
 - Rollback: Mecanismos para revertir un stack a su estado anterior en caso de fallos durante la actualización.
+
+<a name="item5"></a>
+## Como desplegar un stack en AWS 
+
+- Paso 1: Preparación
+- Paso 2: Crear una Plantilla (Template)
+- Paso 3: Configurar el Stack
+- Paso 4: Crear el Stack
+- Paso 5: Gestión del Stack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
