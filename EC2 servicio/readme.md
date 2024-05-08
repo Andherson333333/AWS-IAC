@@ -71,5 +71,3 @@ Se puede desplega un ec2 de varios metodos esto son :
     - `terraform plan`
     - `terraform apply`
     - `terraform destroy`
-
-
