@@ -29,7 +29,7 @@ Algunos comandos comunes de Terraform incluyen:
 
 ## Instalacion terrform
 
-Para instalar terraform porfavor ir a la documentacion oficial `https://developer.hashicorp.com/terraform/install`
+Para instalar terraform porfavor ir a la documentacion oficial https://developer.hashicorp.com/terraform/install
 
 
 Para instalar terraform en un sistema linux (debian o ubuntu) se puede realizar con los siguientes comandos :
