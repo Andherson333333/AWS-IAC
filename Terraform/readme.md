@@ -9,11 +9,11 @@
 
   En Terraform, la estructura de archivos típicamente incluye:
 
-Archivos de configuración principal: como main.tf, donde se definen los recursos y configuraciones principales.
-Archivos de variables: como variables.tf, donde se declaran las variables utilizadas en el código.
-Archivos de salidas: como outputs.tf, donde se especifican las salidas de los recursos creados.
-Archivos de configuración de proveedores: como providers.tf, donde se configuran los proveedores de nube o servicios.
-Otros archivos de soporte: como terraform.tfstate (estado de la infraestructura) y terraform.tfvars (valores de variables).
+Archivos de configuración principal: como `main.tf`, donde se definen los recursos y configuraciones principales.
+Archivos de variables: como `variables.tf`, donde se declaran las variables utilizadas en el código.
+Archivos de salidas: como `outputs.tf`, donde se especifican las salidas de los recursos creados.
+Archivos de configuración de proveedores: como `providers.tf`, donde se configuran los proveedores de nube o servicios.
+Otros archivos de soporte: como `terraform.tfstate` (estado de la infraestructura) y terraform.tfvars (valores de variables).
 
 
 ## Comandos terraform 
