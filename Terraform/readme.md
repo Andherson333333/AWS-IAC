@@ -10,7 +10,7 @@
 <a name="item1"></a>
 ## Que es IAC?
 
-  La Infraestructura como Código (IAC) es una metodología que trata la infraestructura informática como software, lo que permite gestionar y configurar de manera automatizada todos los recursos de una infraestructura tecnológica mediante código. En lugar de configurar manualmente servidores, redes y otros componentes, se utiliza código para describir la infraestructura deseada, lo que facilita su implementación, mantenimiento y escalabilidad.
+  La Infraestructura como Código (IAC) es una metodología que trata la infraestructura informática como software, lo que permite gestionar y configurar de manera automatizada todos los recursos de una infraestructura tecnológica mediante código. En lugar de configurar manualmente servidores, redes y otros componentes, se utiliza código para describir la infraestructura deseada, lo que facilita su implementación, mantenimiento y escalabilidad. Terrafom tiene la capacidad de comunicarse a traves de api con AWS,GCPM,AKS entre otras plataformas de cloud para mas informacion https://registry.terraform.io/browse/providers
 
 <a name="item2"></a>
 ## Que es terraform?
@@ -95,5 +95,5 @@ estructuras de control son fundamentales en Terraform para realizar operaciones 
 - `Estructura terraform:`Utilizada para configurar opciones generales de Terraform, como la versión requerida.
 - `Estructura provider:`Especifica el proveedor de servicios en la nube que se utilizará en el proyecto.
 
-
+## 
 
