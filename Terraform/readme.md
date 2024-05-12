@@ -17,3 +17,12 @@
 
 ## Comandos terraform 
 
+Algunos comandos comunes de Terraform incluyen:
+
+- `terraform init:` Inicializa el directorio de trabajo y descarga los proveedores y módulos necesarios.
+- `terraform plan:` Genera un plan de ejecución que muestra los cambios que se aplicarán en la infraestructura.
+- `terraform apply:` Aplica los cambios definidos en el código de Terraform en la infraestructura.
+- `terraform destroy:` Elimina todos los recursos gestionados por Terraform según la configuración.
+- `terraform validate:` Verifica la sintaxis y la semántica de los archivos de configuración de Terraform.
+- `terraform state:` Permite gestionar el estado de la infraestructura y realizar operaciones avanzadas.
+
