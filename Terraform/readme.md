@@ -56,7 +56,7 @@ sudo apt update && sudo apt install terraform
 <a name="item6"></a>
 ## Funciones Terrafomr
 
-Terraform proporciona una serie de funciones que pueden ser utilizadas dentro de los archivos de configuración para realizar operaciones y manipulaciones más avanzadas , estos son alguna funciones si quiere ver en detalle 
+Terraform proporciona una serie de funciones que pueden ser utilizadas dentro de los archivos de configuración para realizar operaciones y manipulaciones más avanzadas , estos son alguna funciones si quiere ver en detalle https://developer.hashicorp.com/terraform/language/functions
 
 - `abs:` Devuelve el valor absoluto de un número.
 - `ceil:` Redondea un número hacia arriba al entero más cercano.
