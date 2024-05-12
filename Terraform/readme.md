@@ -1,5 +1,5 @@
 ## Índice de contenidos
-* [Que es AWS ?](#item1)
+* [Que es IAC?](#item1)
 * [Que es terraform?](#item2)
 * [Estrucutura de archivos terraform](#item3)
 * [Comandos terraform ](#item4)
