@@ -54,3 +54,30 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 ```
 
+## Funciones Terrafomr
+
+Terraform proporciona una serie de funciones que pueden ser utilizadas dentro de los archivos de configuración para realizar operaciones y manipulaciones más avanzadas , estos son alguna funciones si quiere ver en detalle 
+
+- abs: Devuelve el valor absoluto de un número.
+- ceil: Redondea un número hacia arriba al entero más cercano.
+- cidrhost: Obtiene la dirección IP de un host dentro de una subred CIDR.
+- coalesce: Devuelve el primer valor no nulo de una lista de valores.
+- concat: Concatena dos o más listas.
+- distinct: Elimina elementos duplicados de una lista.
+- flatten: Convierte una lista de listas en una lista plana.
+- keys: Devuelve las claves de un mapa como una lista.
+- length: Devuelve la longitud de una lista, conjunto o cadena de texto.
+- lower: Convierte una cadena de texto a minúsculas.
+- map: Crea un nuevo mapa a partir de otro aplicando una función a cada par clave-valor.
+- max: Retorna el valor máximo de una lista de números.
+- merge: Combina varios mapas en uno solo.
+- min: Retorna el valor mínimo de una lista de números.
+- regex: Realiza una búsqueda de expresiones regulares en una cadena de texto.
+- replace: Reemplaza todas las ocurrencias de una subcadena en una cadena de texto.
+- reverse: Invierte el orden de una lista.
+- sort: Ordena una lista en orden ascendente o descendente.
+- timestamp: Devuelve la marca de tiempo actual en formato RFC3339.
+- upper: Convierte una cadena de texto a mayúsculas.
+
+## Estrucutras de control
+
