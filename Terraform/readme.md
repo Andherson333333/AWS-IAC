@@ -1,4 +1,5 @@
 ## Que es IAC?
+
   La Infraestructura como Código (IAC) es una metodología que trata la infraestructura informática como software, lo que permite gestionar y configurar de manera automatizada todos los recursos de una infraestructura tecnológica mediante código. En lugar de configurar manualmente servidores, redes y otros componentes, se utiliza código para describir la infraestructura deseada, lo que facilita su implementación, mantenimiento y escalabilidad.
   
 ## Que es terraform
@@ -25,4 +26,17 @@ Algunos comandos comunes de Terraform incluyen:
 - `terraform destroy:` Elimina todos los recursos gestionados por Terraform según la configuración.
 - `terraform validate:` Verifica la sintaxis y la semántica de los archivos de configuración de Terraform.
 - `terraform state:` Permite gestionar el estado de la infraestructura y realizar operaciones avanzadas.
+
+## Instalacion terrform
+
+Para instalar terraform porfavor ir a la documentacion oficial `https://developer.hashicorp.com/terraform/install`
+
+
+Para instalar terraform en un sistema linux (debian o ubuntu) se puede realizar con los siguientes comandos :
+
+```
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+```
 
