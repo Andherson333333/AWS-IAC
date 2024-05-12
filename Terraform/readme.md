@@ -81,3 +81,18 @@ Terraform proporciona una serie de funciones que pueden ser utilizadas dentro de
 
 ## Estrucutras de control
 
+estructuras de control son fundamentales en Terraform para realizar operaciones condicionales, iterativas y de manipulación de datos en el código de configuración, lo que permite una gestión más dinámica y flexible de la infraestructura como código.
+
+- Estructura if y else:Utilizada para realizar operaciones condicionales basadas en una expresión booleana.
+- Estructura for:Permite realizar iteraciones o bucles para crear múltiples instancias de un recurso.
+- Estructura for_each:Similar a for, pero permite crear instancias de recursos basadas en un conjunto de claves y valores.
+- Estructura dynamic:Utilizada para generar recursos de forma dinámica, especialmente útil para aplicar configuraciones similares a múltiples recursos.
+- Estructura each:Utilizada en combinación con for_each para acceder a las claves y valores de un mapa durante la creación de recursos.
+- Estructura count:Permite crear un número específico de instancias de un recurso según un valor numérico.
+- Estructura depends_on:Establece dependencias explícitas entre recursos, asegurando que ciertos recursos se creen antes que otros.
+- Estructura locals:Permite definir variables locales dentro del bloque de configuración para reutilizar valores.
+- Estructura terraform:Utilizada para configurar opciones generales de Terraform, como la versión requerida.
+- Estructura provider:Especifica el proveedor de servicios en la nube que se utilizará en el proyecto.
+
+
+
