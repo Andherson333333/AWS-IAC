@@ -1,11 +1,23 @@
+## Índice de contenidos
+* [Que es AWS ?](#item1)
+* [Que es terraform?](#item2)
+* [Estrucutura de archivos terraform](#item3)
+* [Comandos terraform ](#item4)
+* [Instalacion terrform](#item5)
+* [Creacion EC2 con Cloudformation](#item6)
+* [Creacion EC2 con Terraform](#item7)
+
+<a name="item1"></a>
 ## Que es IAC?
 
   La Infraestructura como Código (IAC) es una metodología que trata la infraestructura informática como software, lo que permite gestionar y configurar de manera automatizada todos los recursos de una infraestructura tecnológica mediante código. En lugar de configurar manualmente servidores, redes y otros componentes, se utiliza código para describir la infraestructura deseada, lo que facilita su implementación, mantenimiento y escalabilidad.
-  
-## Que es terraform
+
+<a name="item2"></a>
+## Que es terraform?
 
   Terraform es una herramienta de código abierto desarrollada por HashiCorp que se utiliza para implementar y gestionar infraestructuras de manera automatizada y declarativa. Permite definir la infraestructura como código en un lenguaje específico (HCL, HashiCorp Configuration Language), lo que facilita la creación, modificación y eliminación de recursos en diferentes proveedores de nube y entornos on-premise de manera coherente y reproducible.
 
+<a name="item3"></a>
 ## Estrucutura de archivos terraform
 
   En Terraform, la estructura de archivos típicamente incluye:
@@ -16,6 +28,7 @@
 - Archivos de configuración de proveedores: como `providers.tf`, donde se configuran los proveedores de nube o servicios.
 - Otros archivos de soporte: como `terraform.tfstate` (estado de la infraestructura) y terraform.tfvars (valores de variables).
 
+<a name="item4"></a>
 ## Comandos terraform 
 
 Algunos comandos comunes de Terraform incluyen:
@@ -27,6 +40,7 @@ Algunos comandos comunes de Terraform incluyen:
 - `terraform validate:` Verifica la sintaxis y la semántica de los archivos de configuración de Terraform.
 - `terraform state:` Permite gestionar el estado de la infraestructura y realizar operaciones avanzadas.
 
+<a name="item5"></a>
 ## Instalacion terrform
 
 Para instalar terraform porfavor ir a la documentacion oficial https://developer.hashicorp.com/terraform/install
