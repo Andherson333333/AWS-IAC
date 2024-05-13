@@ -94,6 +94,3 @@ estructuras de control son fundamentales en Terraform para realizar operaciones 
 - `Estructura locals:`Permite definir variables locales dentro del bloque de configuración para reutilizar valores.
 - `Estructura terraform:`Utilizada para configurar opciones generales de Terraform, como la versión requerida.
 - `Estructura provider:`Especifica el proveedor de servicios en la nube que se utilizará en el proyecto.
-
-## 
-
