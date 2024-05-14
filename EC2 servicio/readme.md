@@ -70,11 +70,11 @@ Se puede desplega un ec2 de varios metodos esto son :
     - `terraform init`
     - 
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-2.PNG)
+
     - `terraform plan`
-    - 
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-3.PNG)
-    - `terraform apply`
-    - 
+
+    - `terraform apply` 
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-4.PNG)
 
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-5.PNG)
