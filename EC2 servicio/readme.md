@@ -65,6 +65,9 @@ Se puede desplega un ec2 de varios metodos esto son :
   - `variables.tf` Este archivo se utiliza para definir las variables que se utilizarán en el archivo main.t
  
 - 2 Crear archivos que termine .tf
+  
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-1.PNG)
+
 - 3 Implementar codigo 
 - 4 Desplegar (se usan los siguientes comandos:)
   
