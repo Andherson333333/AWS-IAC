@@ -86,5 +86,4 @@ Se puede desplega un ec2 de varios metodos esto son :
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-5.PNG)
 
  - `terraform destroy`
-![Diagrama]()
     
