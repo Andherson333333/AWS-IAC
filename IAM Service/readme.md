@@ -39,6 +39,13 @@ El codigo para el depligue se encuentra en la carpeta terraform
 - Creacion de la estructura de terrafomr con los archivos comunes `provider.tf` `variables.tf` `output.tf` `main.tf` `terraform.tfvars `
 - Aplicamos las configuraciones con los comandos de terraform
 
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+
 
 
 
