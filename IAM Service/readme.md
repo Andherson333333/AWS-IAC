@@ -18,7 +18,7 @@ Políticas (Policies): Las políticas en IAM son documentos JSON que definen los
 
 Roles (Roles): Un rol en IAM es similar a un usuario, pero se utiliza para conceder permisos temporales a una entidad de confianza, como un usuario de otro servicio de AWS, una aplicación o un servicio externo. Los roles se utilizan comúnmente para delegar acceso entre servicios de AWS y para permitir a las aplicaciones acceder a recursos de AWS de manera segura sin exponer credenciales.
 
-## Creacion usuario y permisos
+## Creacion usuario y politicas
 
 Nota: Para crear usuarios se debe poseer una cuenta con suficiente permisos para crearlos  
 
@@ -30,6 +30,15 @@ Hay varias formas de crear usuarios en AWS:
 - Infraestructura como Código (IAC), utilizando herramientas como Terraform o AWS CloudFormation
 
 En este caso lo vamso a crear con IAC
+
+## Terraform
+
+El codigo para el depligue se encuentra en la carpeta terraform
+
+- Instalacion de terrafomr
+- Creacion de la estructura de terrafomr con los archivos comunes `provider.tf` `variables.tf` `output.tf` `main.tf` `terraform.tfvars `
+- Aplicamos las configuraciones con los comandos de terraform
+
 
 
 
