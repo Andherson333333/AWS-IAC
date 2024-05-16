@@ -17,3 +17,21 @@ Políticas (Policies): Las políticas en IAM son documentos JSON que definen los
 ## Que son roles
 
 Roles (Roles): Un rol en IAM es similar a un usuario, pero se utiliza para conceder permisos temporales a una entidad de confianza, como un usuario de otro servicio de AWS, una aplicación o un servicio externo. Los roles se utilizan comúnmente para delegar acceso entre servicios de AWS y para permitir a las aplicaciones acceder a recursos de AWS de manera segura sin exponer credenciales.
+
+## Creacion usuario y permisos
+
+Nota: Para crear usuarios se debe poseer una cuenta con suficiente permisos para crearlos  
+
+Hay varias formas de crear usuarios en AWS:
+
+- Consola de AWS
+- AWS CLI (Command Line Interface)
+- SDKs de AWS (como Python, Java, Node.js, etc.)
+- Infraestructura como Código (IAC), utilizando herramientas como Terraform o AWS CloudFormation
+
+En este caso lo vamso a crear con IAC
+
+
+
+
+
