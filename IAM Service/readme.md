@@ -38,8 +38,7 @@ El codigo para el depligue se encuentra en la carpeta terraform, hay 2 carpetas 
 - 1 terraform-code1 con politicas creadas pro AWS y haciendo uso de ellas
 - 2 terraform-code2 con politicas creadas manualmente
 
-
-## Despliugue con terrafomr
+## Despliegue con Terraform
 
 - Instalacion de terrafomr
 - Creacion de la estructura de terrafomr con los archivos comunes `provider.tf` `variables.tf` `output.tf` `main.tf` `terraform.tfvars `
