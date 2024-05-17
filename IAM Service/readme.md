@@ -31,13 +31,15 @@ Hay varias formas de crear usuarios en AWS:
 
 En este caso lo vamso a crear con IAC
 
-## Terraform
+## Terraform 
 
 El codigo para el depligue se encuentra en la carpeta terraform, hay 2 carpetas terraform 
 
 - 1 terraform-code1 con politicas creadas pro AWS y haciendo uso de ellas
 - 2 terraform-code2 con politicas creadas manualmente
 
+
+## Despliugue con terrafomr
 
 - Instalacion de terrafomr
 - Creacion de la estructura de terrafomr con los archivos comunes `provider.tf` `variables.tf` `output.tf` `main.tf` `terraform.tfvars `
