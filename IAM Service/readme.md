@@ -71,8 +71,9 @@ terraform-code1
 terraform-code2
 ![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/IAM%20Service/imagenes/terraform-2.png)
 
+## Despliegue con Cloudformation
 
-
+El codigo para el depligue se encuentra en la carpeta cloudformation-code
 
 
 
