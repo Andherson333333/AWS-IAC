@@ -44,12 +44,13 @@ El codigo para el depligue se encuentra en la carpeta terraform, hay 2 carpetas 
 - Creacion de la estructura de terrafomr con los archivos comunes `provider.tf` `variables.tf` `output.tf` `main.tf` `terraform.tfvars `
 - Aplicamos las configuraciones con los comandos de terraform
 
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
+
+terraform-code1
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/IAM%20Service/imagenes/terraform-4.png)
+
+terraform-code2
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/IAM%20Service/imagenes/terraform-2.png)
+
 
 
 
