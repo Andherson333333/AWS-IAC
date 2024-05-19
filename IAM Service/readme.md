@@ -7,8 +7,7 @@
 * [Creacion usuario y politicas](#item6)
 * [Terraform ](#item7)
 * [Despliegue con Terraform](#item8)
-* [](#item9)
-* [](#item10)
+* [Despliegue con Cloudformation](#item9)
 
 <a name="item1"></a>
 ## Que es IAM ?
