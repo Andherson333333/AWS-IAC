@@ -40,6 +40,20 @@ Para crear una vpc se puede realizar con varios metodos :
 - SDk (Kit de Desarrollo de Software)
 - IAC (Infraestructura como Código)
 
+
+## Creacion Interfaz Grafica
+
+1) Service - VPC
+2) Create VPC (colocar el rango CIDR IP)
+3) Crear Subred VPC (Esto ayuda a crear redundancia, una subred por cada zona recomendada)
+4) Crear ACL (Al crear la subred se crea una por defecto para cada subred)
+5) Crear tabla de ruteo (Se crea una tabla por defecto principal para comunicar mi VPC internamente sin acceso a internet)
+6) Crear Internet Gateway (Se encarga de darle acceso a internet a mi VPC, es mi puerta de salida)
+7) Crear tabla de ruteo (asociada al Internet Gateway)
+
+
+## Creacion con IAC (Terrafomr y cloudformation)
+
 En esta caso se va a crear con IAC con 2 herramientas que son terrafomr y cloudformation
 
 
