@@ -6,6 +6,17 @@ Esta red virtual está completamente aislada de las redes de otros usuarios, por
 
 Con una VPC, tienes control sobre tu entorno de red. Puedes definir reglas de acceso, configurar firewalls y establecer grupos de seguridad para regular quién puede acceder a tus recursos y cómo pueden comunicarse.
 
+## Ventajas y desventajas
+
+| Ventajas de una VPC                  | Desventajas de una VPC                       |
+|--------------------------------------|----------------------------------------------|
+| 1. Seguridad Mejorada                | 1. Configuración Compleja                    |
+| 2. Control Total sobre la Red         | 2. Costos Adicionales                        |
+| 3. Escalabilidad                     | 3. Posible Riesgo de Errores                 |
+| 4. Mayor Disponibilidad              | 4. Dependencia de la Conexión a Internet     |
+| 5. Integración con Servicios en la Nube | 5. Requerimientos de Conocimientos Específicos |
+| 6. Costos Controlados                | 6. Posibles Limitaciones de Recursos         |
+
 ## Componentes principales VPC
 
 - 1-VPC
