@@ -35,10 +35,10 @@ Con una VPC, tienes control sobre tu entorno de red. Puedes definir reglas de ac
 
 Para crear una vpc se puede realizar con varios metodos :
 
-GUI (Interfaz grafica)
-CLI (Interfaz de Línea de Comandos)
-SDk (Kit de Desarrollo de Software)
-IAC (Infraestructura como Código)
+- GUI (Interfaz grafica)
+- CLI (Interfaz de Línea de Comandos)
+- SDk (Kit de Desarrollo de Software)
+- IAC (Infraestructura como Código)
 
 En esta caso se va a crear con IAC con 2 herramientas que son terrafomr y cloudformation
 
