@@ -21,7 +21,7 @@ Con una VPC, tienes control sobre tu entorno de red. Puedes definir reglas de ac
 
 - 1-VPC
 - 2-Subnets
-- 3-I1P addressing
+- 3-IP addressing
 - 4-Network Access Control List (NACL)
 - 5-Security Group
 - 6-Routing
@@ -30,6 +30,20 @@ Con una VPC, tienes control sobre tu entorno de red. Puedes definir reglas de ac
 - 9-Traffic Mirroring
 - 10-VPC Flow Logs
 - 11-VPN connections
+
+## Creacion de una VPC
+
+Para crear una vpc se puede realizar con varios metodos :
+
+GUI (Interfaz grafica)
+CLI (Interfaz de Línea de Comandos)
+SDk (Kit de Desarrollo de Software)
+IAC (Infraestructura como Código)
+
+En esta caso se va a crear con IAC con 2 herramientas que son terrafomr y cloudformation
+
+
+
 
 
 
