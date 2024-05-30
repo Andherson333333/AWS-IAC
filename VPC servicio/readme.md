@@ -8,17 +8,17 @@ Con una VPC, tienes control sobre tu entorno de red. Puedes definir reglas de ac
 
 ## Componentes principales VPC
 
-1-VPC
-2-Subnets
-3-IP addressing
-4-Network Access Control List (NACL)
-5-Security Group
-6-Routing
-7-Gateways and endpoints
-8-Peering connections
-9-Traffic Mirroring
-10-VPC Flow Logs
-11-VPN connections
+- 1-VPC
+- 2-Subnets
+- 3-I1P addressing
+- 4-Network Access Control List (NACL)
+- 5-Security Group
+- 6-Routing
+- 7-Gateways and endpoints
+- 8-Peering connections
+- 9-Traffic Mirroring
+- 10-VPC Flow Logs
+- 11-VPN connections
 
 
 
