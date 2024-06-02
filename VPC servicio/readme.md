@@ -1,4 +1,4 @@
-## Que es una VPC
+## Que es una VPC ?
 
 Una VPC es una red virtual que creas en la nube. Te permite tener tu propia sección privada de Internet, como tener tu propia red dentro de una red más grande. Dentro de esta VPC, puedes crear y gestionar diversos recursos, como servidores, bases de datos y almacenamiento.
 
@@ -54,7 +54,23 @@ Para crear una vpc se puede realizar con varios metodos :
 
 ## Creacion con IAC (Terrafomr y cloudformation)
 
-En esta caso se va a crear con IAC con 2 herramientas que son terrafomr y cloudformation
+En esta caso se va a crear con IAC con 2 herramientas que son terrafomr y cloudformation , esta vpc contendra los siguientes componentes:
+
+- 1-VPC
+- 2-Subnets
+- 3-IP addressing
+- 4-Network Access Control List (NACL)
+- 5-Security Group
+- 6-Routing
+- 7-Gateways
+
+El  codigo esta divido de la siguiente manera :
+
+- 1 Terraform-code1 : contendra codigo terrafomr pero sin modulos con un solo archivo main
+- 2 Terraform-code2 : contendra codigo pero en forma de modulos
+- 3 Cloduformation : contedra 1 stack
+
+Las 3 configuracioens hacen lo mismo solo de diferente manera.
 
 
 
