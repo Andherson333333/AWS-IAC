@@ -72,8 +72,7 @@ El  codigo esta divido de la siguiente manera :
 
 Las 3 configuracioens hacen lo mismo solo de diferente manera.
 
-
-
+![Diagrama]()
 
 
 
