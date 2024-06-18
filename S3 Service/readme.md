@@ -1,9 +1,18 @@
-# Amazon S3 (Simple Storage Service)
+## Índice de contenidos
+* [¿Qué es Amazon S3?](#item1)
+* [Características Clave](#item2)
+* [Casos de Uso Comunes](#item3)
+* [Cómo Funcion](#item4)
+* [Creación de un Bucket](#item5)
+* [Creacion S3 con IAC](#item6)
 
+# Amazon S3 (Simple Storage Service)
+<a name="item1"></a>
 ## ¿Qué es Amazon S3?
 
 Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en la industria. Los usuarios pueden almacenar y recuperar cualquier cantidad de datos en cualquier momento y desde cualquier lugar en la web.
 
+<a name="item2"></a>
 ## Características Clave
 
 - **Almacenamiento de Objetos**: S3 almacena datos como objetos dentro de buckets. Un objeto es un archivo y cualquier metadato asociado con él. Los buckets son contenedores para almacenar objetos.
@@ -14,6 +23,7 @@ Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona
 - **Replicación**: Soporta la replicación de objetos en diferentes regiones (Cross-Region Replication, CRR).
 - **Integración con otros servicios de AWS**: Se integra perfectamente con servicios como Amazon CloudFront, AWS Lambda, Amazon RDS, entre otros.
 
+<a name="item3"></a>
 ## Casos de Uso Comunes
 
 - **Almacenamiento y Distribución de Contenidos**: Ideal para almacenar y distribuir contenido estático como imágenes, videos y documentos.
@@ -22,7 +32,8 @@ Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona
 - **Big Data y Análisis**: Funciona como un almacén de datos para soluciones de big data.
 - **Almacenamiento de Archivos de Aplicaciones**: Almacena archivos de aplicaciones como logs y datos de configuración.
 
-## Cómo Funciona
+<a name="item4"></a>
+## Cómo Funcion
 
 ### Creación de un Bucket
 
@@ -46,6 +57,7 @@ Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona
 - **Replicación**: Configura la replicación para copiar objetos a otros buckets en diferentes regiones.
 - **Políticas y ACLs**: Administra el acceso a los objetos mediante políticas de bucket y listas de control de acceso.
 
+<a name="item5"></a>
 ## Precios
 
 La estructura de precios de Amazon S3 incluye:
@@ -54,10 +66,9 @@ La estructura de precios de Amazon S3 incluye:
 - **Solicitudes y Recuperación de Datos**: Pago por número de solicitudes y cantidad de datos transferidos.
 - **Transferencia de Datos**: Costos asociados por transferencias de datos hacia fuera de S3 (excepto hacia otros servicios de AWS).
 
-
-
 Amazon S3 es una solución robusta y versátil para el almacenamiento de objetos en la nube, adecuada para una amplia gama de necesidades de almacenamiento.
 
+<a name="item6"></a>
 ## Creacion S3 con IAC
 
 Se procederá a crear un bucket S3 con las prácticas recomendadas que incluyen versionado, ciclo de vida y cifrado habilitado por defecto. El código se encuentra en la carpeta terraform-code.
