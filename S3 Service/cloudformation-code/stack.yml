@@ -1,1 +1,53 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Plantilla para crear un bucket S3 con las mejores prácticas:
+  - Versionado habilitado
+  - Reglas de ciclo de vida configuradas
+  - Cifrado habilitado por defecto
 
+Parameters:
+  BucketName:
+    Description: "El nombre del bucket de S3"
+    Type: String
+    Default: "andherson-s3-demo-xyz"
+
+  Environment:
+    Description: "El entorno para el que se crea el bucket"
+    Type: String
+    Default: "Dev"
+
+  Project:
+    Description: "El proyecto asociado con el bucket"
+    Type: String
+    Default: "S3Demo"
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      LifecycleConfiguration:
+        Rules:
+          - Id: "log"
+            Status: "Enabled"
+            Transitions:
+              - TransitionInDays: 30
+                StorageClass: "GLACIER"
+            ExpirationInDays: 365
+            NoncurrentVersionExpirationInDays: 90
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      VersioningConfiguration:
+        Status: "Enabled"
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Project
+          Value: !Ref Project
+
+Outputs:
+  BucketId:
+    Description: "El nombre del bucket de S3"
+    Value: !Ref S3Bucket
