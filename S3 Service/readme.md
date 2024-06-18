@@ -72,5 +72,5 @@ Se procederá a crear un bucket S3 con las prácticas recomendadas que incluyen 
 - Esta configuración sigue las mejores prácticas de AWS al habilitar el versionado, configurar políticas de ciclo de vida y habilitar el cifrado por defecto, asegurando así que los datos almacenados sean seguros y administrados de manera eficiente
 
 
-
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/S3%20Service/imagenes/s3-1.png)
 
