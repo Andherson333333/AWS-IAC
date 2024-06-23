@@ -44,9 +44,6 @@ Para configurar un backend remoto con AWS S3, necesitas dos recursos antes de ap
 terraform init
 ```
 ```
-terraform init
-```
-```
 terrafomr plan
 ```
 ```
