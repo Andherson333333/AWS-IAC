@@ -38,6 +38,7 @@ Para configurar un backend remoto con AWS S3, necesitas dos recursos antes de ap
    - variables.tf
    - output.tf
    - provider.tf
+   - backend.tf
 
 3.  ** Utilizar los comandos para terrafomr para iniciar:
 ```
