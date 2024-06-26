@@ -1,9 +1,9 @@
 variable "instance_id" {
-  description = "The ID of the EC2 instance to monitor"
+  description = "ID ec2 monitoring"
   type        = string
 }
 
 variable "sns_email" {
-  description = "The email address to subscribe to the SNS topic"
+  description = "email address send"
   type        = string
 }
