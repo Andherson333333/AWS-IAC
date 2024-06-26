@@ -1,4 +1,4 @@
-
+# Creacion metrica
 resource "aws_cloudwatch_metric_alarm" "alarm" {
   alarm_name          = "high_cpu_alarm"
   comparison_operator = "GreaterThanThreshold"
@@ -20,18 +20,21 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   }
 }
 
+# Creacion topic
 resource "aws_sns_topic" "sns_send" {
   name = "sns_send"
 }
 
+# Creacion para envio correo
 resource "aws_sns_topic_subscription" "example" {
   topic_arn = aws_sns_topic.sns_send.arn
   protocol  = "email"
   endpoint  = var.sns_email
 }
 
-resource "aws_cloudwatch_dashboard" "example" {
-  dashboard_name = "example_dashboard"
+# Creacion dashboard
+resource "aws_cloudwatch_dashboard" "dashboard" {
+  dashboard_name = "ec2_cpu_utilization"
 
   dashboard_body = <<EOF
 {
