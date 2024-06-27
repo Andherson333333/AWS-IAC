@@ -1,7 +1,6 @@
 variable "bucket_name" {
   description = "El nombre del bucket de S3"
   type        = string
-  
 }
 
 variable "dynamodb_table_name" {
