@@ -7,10 +7,8 @@
 * [¿Qué es un evento?](#item6)
 * [¿Qué es Application Signal?](#item7)
 * [¿Qué es Network Monitoring?](#item8)
-* [¿Qué es Application Signal?](#item9)
-* [¿Qué son los Insights?](#item10)
-* [¿Qué es Application Signal?](#item11)
-* [Configuración de cloudwathc con IAC](#item12)
+* [¿Qué son los Insights?](#item9)
+* [Configuración de cloudwathc con IAC](#item10)
 
 <a name="item1"></a>
 ## ¿Qué es AWS CloudWatch?
