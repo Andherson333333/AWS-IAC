@@ -1,23 +1,34 @@
+## Índice de contenidos
+* [¿Qué es terraform.tfstate?](#item1)
+* [ ¿Qué es un backend remoto?](#item2)
+* [Servicios remotos](#item3)
+* [Comandos Terraform state](#item4)
+* [Configuración del backend remoto en S3](#item5)
 
 # Terraform Remote Backend Configuration with AWS S3 and DynamoDB
 
+<a name="item1"></a>
 ## ¿Qué es terraform.tfstate?
 El archivo `terraform.tfstate` es un archivo importante generado por Terraform que almacena el estado actual de la infraestructura gestionada. Contiene información sobre los recursos creados, su configuración, relaciones y metadatos relevantes.
 
+<a name="item2"></a>
 ## ¿Qué es un backend remoto?
 Un backend remoto en Terraform se refiere a la configuración de almacenamiento del estado de Terraform en un servicio de almacenamiento remoto en lugar de almacenarlo localmente en el sistema de archivos. Esto es útil en entornos colaborativos donde varias personas trabajan en la misma infraestructura o en entornos distribuidos donde se necesitan múltiples instancias de Terraform que compartan el mismo estado.
 
+<a name="item3"></a>
 ## Servicios remotos
 - **AWS S3:** Utilizando un bucket de S3 para almacenar el estado de Terraform.
 - **Azure Blob Storage:** Utilizando un contenedor de Blob Storage en Azure.
 - **Google Cloud Storage:** Utilizando un bucket de Cloud Storage en Google Cloud Platform.
 - **Terraform Cloud/Enterprise:** Utilizando el servicio de backend remoto proporcionado por HashiCorp como parte de Terraform Cloud o Terraform Enterprise.
 
+<a name="item4"></a>
 ## Comandos Terraform state
 - `terraform show`: Muestra detalles extendidos de la infraestructura.
 - `terraform state list`: Muestra una lista rápida de los recursos.
 - `terraform state show aws_instance.my_instance`: Muestra información sobre un recurso específico.
 
+<a name="item5"></a>
 ## Configuración del backend remoto en S3
 
 Para configurar un backend remoto con AWS S3, necesitas dos recursos antes de aplicar la configuración:
