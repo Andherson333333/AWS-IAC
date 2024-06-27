@@ -1,1 +1,82 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create CloudWatch alarm, SNS topic, subscription, and dashboard.
+
+Parameters:
+  InstanceId:
+    Description: The ID of the EC2 instance to monitor
+    Type: String
+    Default: i-0d3f6e1f82ad0a638
+  SnsEmail:
+    Description: The email address to subscribe to the SNS topic
+    Type: String
+    Default: hwii.rlrby21@juaxe.com
+
+Resources:
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: sns_send
+
+  SNSTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !Ref SnsEmail
+      Protocol: email
+      TopicArn: !Ref SNSTopic
+
+  CPUAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: high_cpu_alarm
+      ComparisonOperator: GreaterThanThreshold
+      EvaluationPeriods: 2
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Period: 120
+      Statistic: Average
+      Threshold: 80
+      AlarmDescription: This metric monitors EC2 CPU utilization
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref SNSTopic
+      Dimensions:
+        - Name: InstanceId
+          Value: !Ref InstanceId
+
+  CloudWatchDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: example_dashboard
+      DashboardBody: !Sub |
+        {
+          "widgets": [
+            {
+              "type": "metric",
+              "x": 0,
+              "y": 0,
+              "width": 12,
+              "height": 6,
+              "properties": {
+                "metrics": [
+                  [ "AWS/EC2", "CPUUtilization", "InstanceId", "${InstanceId}" ]
+                ],
+                "period": 300,
+                "stat": "Average",
+                "region": "us-west-2",
+                "title": "EC2 Instance CPU"
+              }
+            }
+          ]
+        }
+
+Outputs:
+  AlarmArn:
+    Description: The ARN of the CloudWatch alarm
+    Value: !GetAtt CPUAlarm.Arn
+  SNSTopicArn:
+    Description: The ARN of the SNS topic
+    Value: !Ref SNSTopic
+  DashboardName:
+    Description: The name of the CloudWatch dashboard
+    Value: !Ref CloudWatchDashboard
 
