@@ -3,11 +3,11 @@ Description: CloudFormation template to create CloudWatch alarm, SNS topic, subs
 
 Parameters:
   InstanceId:
-    Description: The ID of the EC2 instance to monitor
+    Description: ID EC2
     Type: String
     Default: i-0d3f6e1f82ad0a638
   SnsEmail:
-    Description: The email address to subscribe to the SNS topic
+    Description: email address
     Type: String
     Default: hwii.rlrby21@juaxe.com
 
@@ -35,7 +35,7 @@ Resources:
       Period: 120
       Statistic: Average
       Threshold: 80
-      AlarmDescription: This metric monitors EC2 CPU utilization
+      AlarmDescription: EC2 CPU utilization
       ActionsEnabled: true
       AlarmActions:
         - !Ref SNSTopic
@@ -46,7 +46,7 @@ Resources:
   CloudWatchDashboard:
     Type: AWS::CloudWatch::Dashboard
     Properties:
-      DashboardName: example_dashboard
+      DashboardName: dashboard
       DashboardBody: !Sub |
         {
           "widgets": [
@@ -74,9 +74,9 @@ Outputs:
     Description: The ARN of the CloudWatch alarm
     Value: !GetAtt CPUAlarm.Arn
   SNSTopicArn:
-    Description: The ARN of the SNS topic
+    Description: ARN SNS topic
     Value: !Ref SNSTopic
   DashboardName:
-    Description: The name of the CloudWatch dashboard
+    Description: CloudWatch dashboard
     Value: !Ref CloudWatchDashboard
 
