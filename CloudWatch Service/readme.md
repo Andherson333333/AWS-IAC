@@ -38,9 +38,9 @@ Network Monitoring en CloudWatch te permite monitorear y diagnosticar problemas 
 
 CloudWatch Insights proporciona herramientas para realizar consultas avanzadas y análisis en logs y métricas. Log Insights permite buscar y analizar grandes volúmenes de logs rápidamente, mientras que Metric Insights te ayuda a identificar patrones y tendencias en las métricas.
 
-## Configuración de Terraform
+## Configuración de cloudwathc con IAC
 
-Este repositorio incluye la configuración de Terraform que crea los siguientes recursos:
+Este repositorio incluye la configuración de Terraform y cloduformation que crea los siguientes recursos:
 - Una alarma de CloudWatch para monitorear la utilización de CPU de una instancia EC2 específica.
 - Un tema SNS y una suscripción de correo electrónico para recibir notificaciones.
 - Un dashboard de CloudWatch para visualizar las métricas.
