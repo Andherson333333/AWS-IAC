@@ -62,3 +62,6 @@ Este repositorio incluye la configuración de Terraform y cloduformation que cre
 - Una alarma de CloudWatch para monitorear la utilización de CPU de una instancia EC2 específica.
 - Un tema SNS y una suscripción de correo electrónico para recibir notificaciones.
 - Un dashboard de CloudWatch para visualizar las métricas.
+
+
+![Diagrama]()
