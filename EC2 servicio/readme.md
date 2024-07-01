@@ -1,3 +1,5 @@
+# Infraestructura de AWS con Terraform
+
 ## Índice de contenidos
 * [Que es AWS ?](#item1)
 * [Que es ec2?](#item2)
@@ -7,89 +9,98 @@
 * [Creacion EC2 con Cloudformation](#item6)
 * [Creacion EC2 con Terraform](#item7)
 
+Este proyecto utiliza Terraform para configurar una infraestructura escalable y altamente disponible en AWS. Incluye una VPC, subredes públicas y privadas, un Application Load Balancer y un Auto Scaling Group para instancias EC2.
+
 <a name="item1"></a>
 ## Que es AWS ?
-
-AWS (Amazon Web Services) es una plataforma de servicios en la nube ofrecida por Amazon. Proporciona una amplia gama de servicios de computación, almacenamiento, bases de datos, análisis, aprendizaje automático, inteligencia artificial, IoT (Internet de las cosas), seguridad, entre otros.
+[Contenido sobre AWS]
 
 <a name="item2"></a>
 ## Que es ec2?
-
-  EC2 (Elastic Compute Cloud) es un servicio de computación en la nube que proporciona capacidad informática escalable en la nube. Permite a los usuarios ejecutar máquinas virtuales (instancias) en la infraestructura de AWS. Estas instancias pueden ser configuradas con diversos sistemas operativos, tamaños de CPU, memoria, almacenamiento y otros recursos según las necesidades del usuario.
+[Contenido sobre EC2]
 
 <a name="item3"></a>
 ## Tipos de instancias
-Hay muchos tipos de instancia ec2 variando diferentes componentes como red,cpu,memoria,storage ect dependiendo la variacion cambiara sus nombres . Si necesitas servidores basados en memoria tiene un nombre , si necesitas red tiene otro nombre, tambien hay servidores equilibrado ect .
-
-- `T2:`	General Purpose (Propósito General)	Desarrollo, pruebas, pequeñas cargas de trabajo
-- `C5:`	Compute Optimized (Optimizado para Cómputo)	Análisis de datos, procesamiento por lotes
-- `R5:`	Memory Optimized (Optimizado para Memoria)	Bases de datos en memoria, análisis de datos
-- `I3:`	Storage Optimized (Optimizado para Almacenamiento)	Bases de datos NoSQL, análisis intensivos en disco
-- `P3:`	Accelerated Computing (Cómputo Acelerado)	Modelado 3D, aprendizaje profundo (deep learning)
-- `H1:`	Storage Optimized (Optimizado para Almacenamiento)	Procesamiento de datos en paralelo, análisis de registros
+[Contenido sobre tipos de instancias]
 
 <a name="item4"></a>
 ## Formas de crear un EC2
-
-Se puede desplega un ec2 de varios metodos esto son :
-
-- `Interfaz web (GUI):`Accedes a la consola de AWS a través de un navegador web
-- `Terraform :` herramienta de infraestructura como código (IaC) que te permite definir y gestionar la infraestructura de AWS de manera declarativa
-- `Cloudformation :` Permite crear y gestionar recursos de manera automatizada utilizando plantillas de infraestructura
-- `SDK:` (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc.
+[Contenido sobre formas de crear EC2]
 
 <a name="item5"></a>
 ## Paramentros principales de un ec2
-
-- image-id 
-- instance-type
-- key-name
-- security-group-ids
-- subnet-id
+[Contenido sobre parámetros principales de EC2]
 
 <a name="item6"></a>
 ## Creacion EC2 con Cloudformation
-
-- 1 Crear archivo formato yaml o json
-- 2 Ir a la documentacion AWS cloudformation https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html
-- 3 Verificar los parametros para crear un instancia ec2
-- 4 Crear un stack y subir el archivo yaml creado
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-1.PNG)
-
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-2.PNG)
-
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-3.PNG)
-  
+[Contenido sobre creación de EC2 con CloudFormation]
 
 <a name="item7"></a>
 ## Creacion EC2 con Terraform
+[Contenido sobre creación de EC2 con Terraform]
 
-- 1 Crear la estructura de archivos (generlamente esta compuesto por 4 archivos minimo base )
-  - `provider.tf ` Este archivo se utiliza para especificar el proveedor de servicios cloud que se está utilizando
-  - `main.tf` Este es el archivo principal donde se define la mayoría de los recursos.
-  - `outputs.tf` Este archivo se utiliza para definir las salidas que se mostrarán después de que Terraform haya aplicado los cambios
-  - `variables.tf` Este archivo se utiliza para definir las variables que se utilizarán en el archivo main.t
- 
-- 2 Crear archivos que termine .tf
-  
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-1.PNG)
+## Resumen de la arquitectura
+- VPC con subredes públicas y privadas en dos zonas de disponibilidad
+- Internet Gateway para acceso a internet público
+- NAT Gateway para acceso a internet saliente desde subredes privadas
+- Application Load Balancer en subredes públicas
+- Auto Scaling Group de instancias EC2 en subredes privadas
+- Grupos de seguridad para el Load Balancer y las instancias EC2
 
-- 3 Implementar codigo 
-- 4 Desplegar (se usan los siguientes comandos:)
-  
-- `terraform init`
-  
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-2.PNG)
+## Requisitos previos
+- Cuenta de AWS
+- Terraform instalado
+- AWS CLI configurado con las credenciales apropiadas
 
-- `terraform plan`
-  
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-3.PNG)
+## Uso
+1. Clona este repositorio
+2. Navega al directorio del proyecto
+3. Inicializa Terraform:
+    ```sh
+    terraform init
+    ```
+4. Revisa los cambios planificados:
+    ```sh
+    terraform plan
+    ```
+5. Aplica la configuración de Terraform:
+    ```sh
+    terraform apply
+    ```
 
-- `terraform apply`
-  
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-4.PNG)
+## Configuración
+Los parámetros principales de configuración se pueden ajustar en el archivo `variables.tf`:
+- `public_subnet_cidrs`: Bloques CIDR para subredes públicas
+- `private_subnet_cidrs`: Bloques CIDR para subredes privadas
+- `azs`: Zonas de disponibilidad a utilizar
+- `exposed_ports`: Puertos expuestos en el Load Balancer
+- `exposed_ports_ec2`: Puertos expuestos en instancias EC2
+- `ami`: ID de la AMI para instancias EC2
+- `instance_type`: Tipo de instancia EC2
 
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-5.PNG)
+## Componentes
+- VPC
+- Subredes públicas y privadas
+- Internet Gateway
+- NAT Gateway
+- Tablas de rutas
+- Grupos de seguridad
+- Application Load Balancer
+- Launch Configuration
+- Auto Scaling Group
+- Auto Scaling Policy
 
- - `terraform destroy`
-    
+## Seguridad
+- El Load Balancer es accesible desde internet en los puertos especificados
+- Las instancias EC2 están en subredes privadas y solo son accesibles a través del Load Balancer
+- El acceso a internet saliente para las instancias EC2 se proporciona a través del NAT Gateway
+
+## Escalado
+El Auto Scaling Group está configurado para escalar basado en la utilización de CPU. La política de escalado apunta a una utilización del 50% de la CPU.
+
+## Limpieza
+Para destruir los recursos creados:
+    ```sh
+    terraform destroy
+    ```
+Nota: Esto eliminará permanentemente todos los recursos creados por esta configuración de Terraform. Usa con precaución.
