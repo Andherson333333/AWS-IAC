@@ -64,4 +64,7 @@ Este repositorio incluye la configuración de Terraform y cloduformation que cre
 - Un dashboard de CloudWatch para visualizar las métricas.
 
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/CloudWatch%20Service/imagenes/cloudwatch.png)
+
+![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/CloudWatch%20Service/imagenes/cloudwatch-1.png)
+
