@@ -29,7 +29,6 @@ AWS Lambda es un servicio de computación serverless que ejecuta tu código en r
 
 ```
 .
-├── README.md
 ├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
@@ -37,6 +36,10 @@ AWS Lambda es un servicio de computación serverless que ejecuta tu código en r
 ```
 
 ## Despliegue con Terraform
+
+Nota: Hay 2 codigo de terraform 
+- terraform-code1 : ejecuta codigo del lambda dentro de terraform
+- terraform-code2 : ejecuta el codigo a traves de un archivo zip
 
 El directorio `terraform/` contiene archivos de configuración de Terraform para desplegar la función Lambda:
 
