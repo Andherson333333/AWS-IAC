@@ -42,7 +42,7 @@ terrafomr-code2
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── terraform.tfvars
-│   └── create_lambda_package.sh
+│   └── indes.
 ```
 
 ## Despliegue con Terraform
