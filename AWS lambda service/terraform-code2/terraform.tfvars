@@ -1,0 +1,5 @@
+lambda_role_name    = "lambda_role"
+lambda_filename     = "lambda_function.zip"
+lambda_function_name = "test_lambda"
+lambda_handler      = "index.handler"
+lambda_runtime      = "nodejs14.x"
