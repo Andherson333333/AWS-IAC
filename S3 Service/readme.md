@@ -1,42 +1,41 @@
-## Índice de contenidos
-* [¿Qué es Amazon S3?](#item1)
-* [Características Clave](#item2)
-* [Casos de Uso Comunes](#item3)
-* [Cómo Funcion](#item4)
-* [Creación de un Bucket](#item5)
-* [Creacion S3 con IAC](#item6)
+# Proyecto Amazon S3 (Simple Storage Service)
 
-# Amazon S3 (Simple Storage Service)
-<a name="item1"></a>
+Este proyecto demuestra la configuración y gestión de buckets de Amazon S3 utilizando Terraform, siguiendo las mejores prácticas de AWS.
+
+## Tabla de Contenidos
+- [¿Qué es Amazon S3?](#qué-es-amazon-s3)
+- [Características Clave](#características-clave)
+- [Casos de Uso Comunes](#casos-de-uso-comunes)
+- [Cómo Funciona](#cómo-funciona)
+- [Creación de un Bucket S3 con Terraform](#creación-de-un-bucket-s3-con-terraform)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Comenzando](#comenzando)
+
 ## ¿Qué es Amazon S3?
 
-Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en la industria. Los usuarios pueden almacenar y recuperar cualquier cantidad de datos en cualquier momento y desde cualquier lugar en la web.
+Amazon S3 es un servicio de almacenamiento de objetos en la nube que ofrece escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en la industria. Los usuarios pueden almacenar y recuperar cualquier cantidad de datos en cualquier momento y desde cualquier lugar en la web.
 
-<a name="item2"></a>
 ## Características Clave
 
-- **Almacenamiento de Objetos**: S3 almacena datos como objetos dentro de buckets. Un objeto es un archivo y cualquier metadato asociado con él. Los buckets son contenedores para almacenar objetos.
+- **Almacenamiento de Objetos**: S3 almacena datos como objetos dentro de buckets.
 - **Escalabilidad**: Altamente escalable, capaz de manejar grandes cantidades de datos y un número elevado de solicitudes.
-- **Durabilidad y Disponibilidad**: Diseñado para una durabilidad de 99.999999999% (11 nueves) y una disponibilidad de 99.99%.
+- **Durabilidad y Disponibilidad**: Diseñado para una durabilidad de 99,999999999% y una disponibilidad de 99,99%.
 - **Seguridad**: Proporciona cifrado en tránsito (SSL/TLS) y en reposo, además de permisos de acceso mediante políticas de bucket y listas de control de acceso (ACL).
-- **Control de Versiones**: Mantiene múltiples versiones de un mismo objeto, útil para protegerse contra la pérdida de datos y eliminaciones accidentales.
+- **Control de Versiones**: Mantiene múltiples versiones de un mismo objeto.
 - **Replicación**: Soporta la replicación de objetos en diferentes regiones (Cross-Region Replication, CRR).
-- **Integración con otros servicios de AWS**: Se integra perfectamente con servicios como Amazon CloudFront, AWS Lambda, Amazon RDS, entre otros.
+- **Integración con servicios de AWS**: Se integra perfectamente con otros servicios de AWS.
 
-<a name="item3"></a>
 ## Casos de Uso Comunes
 
-- **Almacenamiento y Distribución de Contenidos**: Ideal para almacenar y distribuir contenido estático como imágenes, videos y documentos.
-- **Backup y Recuperación**: Utilizado para el almacenamiento de copias de seguridad y recuperación de datos.
-- **Archivado**: Usado junto con Amazon Glacier para archivado a largo plazo.
-- **Big Data y Análisis**: Funciona como un almacén de datos para soluciones de big data.
-- **Almacenamiento de Archivos de Aplicaciones**: Almacena archivos de aplicaciones como logs y datos de configuración.
+- Almacenamiento y Distribución de Contenidos
+- Backup y Recuperación
+- Archivado
+- Big Data y Análisis
+- Almacenamiento de Archivos de Aplicaciones
 
-<a name="item4"></a>
-## Cómo Funcion
+## Cómo Funciona
 
 ### Creación de un Bucket
-
 1. Accede a la consola de Amazon S3.
 2. Haz clic en "Create bucket".
 3. Introduce un nombre único para el bucket y selecciona la región.
@@ -44,7 +43,6 @@ Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona
 5. Completa la creación del bucket.
 
 ### Subida de Objetos
-
 1. Selecciona el bucket donde quieres subir el objeto.
 2. Haz clic en "Upload".
 3. Selecciona los archivos desde tu computadora.
@@ -52,36 +50,50 @@ Amazon S3 es un servicio de almacenamiento de objetos en la nube que proporciona
 5. Inicia la subida.
 
 ### Gestión de Objetos
+- Habilita el versionado para mantener versiones múltiples de un objeto.
+- Configura la replicación para copiar objetos a otros buckets en diferentes regiones.
+- Administra el acceso a los objetos mediante políticas de bucket y listas de control de acceso.
 
-- **Versionado**: Habilita el versionado para mantener versiones múltiples de un objeto.
-- **Replicación**: Configura la replicación para copiar objetos a otros buckets en diferentes regiones.
-- **Políticas y ACLs**: Administra el acceso a los objetos mediante políticas de bucket y listas de control de acceso.
+## Creación de un Bucket S3 con Terraform
 
-<a name="item5"></a>
-## Precios
+Este proyecto incluye código Terraform para crear un bucket S3 con las mejores prácticas, incluyendo versionado, políticas de ciclo de vida y cifrado por defecto. El código se encuentra en la carpeta `terraform-code`.
 
-La estructura de precios de Amazon S3 incluye:
+### Componentes Clave:
 
-- **Almacenamiento**: Pago por GB almacenado por mes.
-- **Solicitudes y Recuperación de Datos**: Pago por número de solicitudes y cantidad de datos transferidos.
-- **Transferencia de Datos**: Costos asociados por transferencias de datos hacia fuera de S3 (excepto hacia otros servicios de AWS).
+- `aws_s3_bucket`: Crea un bucket S3 con el nombre y las etiquetas especificadas, habilitando el cifrado por defecto con AES256.
+- `aws_s3_bucket_lifecycle_configuration`: Configura las reglas de ciclo de vida del bucket:
+  - Transiciona los objetos a la clase de almacenamiento GLACIER después de 30 días.
+  - Expira los objetos después de 365 días.
+  - Expira las versiones no actuales después de 90 días.
+- `aws_s3_bucket_versioning`: Habilita el versionado del bucket.
 
-Amazon S3 es una solución robusta y versátil para el almacenamiento de objetos en la nube, adecuada para una amplia gama de necesidades de almacenamiento.
+![Diagrama S3](https://github.com/Andherson333333/AWS-IAC/blob/main/S3%20Service/imagenes/s3-1.png)
 
-<a name="item6"></a>
-## Creacion S3 con IAC
+## Estructura del Proyecto
 
-Se procederá a crear un bucket S3 con las prácticas recomendadas que incluyen versionado, ciclo de vida y cifrado habilitado por defecto. El código se encuentra en la carpeta terraform-code.
+```
+.
+├── terraform-code/
+│   ├── main.tf
+│   └── variables.tf
+└── README.md
+```
 
-### Explicación
-- aws_s3_bucket: Este recurso crea un bucket S3 con el nombre y las etiquetas especificadas. Además, habilita el cifrado por defecto utilizando el algoritmo AES256.
-- aws_s3_bucket_lifecycle_configuration: Este recurso configura las reglas de ciclo de vida del bucket. La regla de ejemplo: 
-- Transiciona los objetos a la clase de almacenamiento GLACIER después de 30 días.
-- Expira los objetos después de 365 días.
-- Expira las versiones no actuales después de 90 días.
-- aws_s3_bucket_versioning: Este recurso habilita el versionado del bucket.
-- Esta configuración sigue las mejores prácticas de AWS al habilitar el versionado, configurar políticas de ciclo de vida y habilitar el cifrado por defecto, asegurando así que los datos almacenados sean seguros y administrados de manera eficiente
+## Comenzando
 
+1. Clona este repositorio.
+2. Navega al directorio `terraform-code`.
+3. Actualiza el archivo `variables.tf` con el nombre del bucket y las etiquetas deseadas.
+4. Ejecuta los siguientes comandos:
 
-![Diagrama](https://github.com/Andherson333333/AWS-IAC/blob/main/S3%20Service/imagenes/s3-1.png)
+   ```
+   terraform init
+   terraform plan
+   terraform apply
+   ```
 
+5. Confirma la creación verificando en la consola de AWS S3.
+
+---
+
+Para más información sobre los precios de Amazon S3 y configuraciones avanzadas, por favor consulta la [documentación oficial de AWS](https://aws.amazon.com/s3/).
