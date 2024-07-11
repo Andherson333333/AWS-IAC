@@ -44,6 +44,8 @@ El directorio `terraform/` contiene archivos de configuración de Terraform para
 - `variables.tf`: Define las variables de entrada para la configuración de Terraform.
 - `terraform.tfvars`: Establece los valores para las variables definidas.
 
+Nota: Al desplegar lambda se creara sin un evnto , eso quiere decir que el evnto se tiene que crear de forma manual
+
 ## Despliegue con CloudFormation
 
 El directorio `cloudformation/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
