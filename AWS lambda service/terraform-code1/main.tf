@@ -1,5 +1,3 @@
-# main.tf
-
 # Create an IAM role for the Lambda function
 resource "aws_iam_role" "lambda_role" {
   name = var.lambda_role_name
