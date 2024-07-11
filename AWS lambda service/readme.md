@@ -74,11 +74,3 @@ El directorio `cloudformation/` contiene una plantilla de CloudFormation para de
    ```
 
 Asegúrate de tener las credenciales de AWS necesarias configuradas en tu máquina antes de ejecutar estos comandos.
-
-## Contribuir
-
-¡Las contribuciones son bienvenidas! Por favor, siéntete libre de enviar un Pull Request.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
