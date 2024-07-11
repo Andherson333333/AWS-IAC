@@ -59,22 +59,6 @@ El directorio `terraform/` contiene archivos de configuración de Terraform para
 
 Nota: Al desplegar lambda se creara sin un evnto , eso quiere decir que el evnto se tiene que crear de forma manual
 
-![Terraform 1]()
-
-## Despliegue con CloudFormation
-
-El directorio `cloudformation/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
-
-- `template.yaml`: Plantilla de CloudFormation que define la función Lambda y el rol IAM.
-
-## Comenzando
-
-1. Clona este repositorio:
-   ```
-   git clone https://github.com/tu-usuario/proyecto-despliegue-lambda.git
-   cd proyecto-despliegue-lambda
-   ```
-
 2. Para desplegar usando Terraform:
    ```
    cd terraform
@@ -83,9 +67,10 @@ El directorio `cloudformation/` contiene una plantilla de CloudFormation para de
    terraform apply
    ```
 
-3. Para desplegar usando CloudFormation:
-   ```
-   aws cloudformation create-stack --stack-name mi-stack-lambda --template-body file://cloudformation/template.yaml
-   ```
+![Terraform 1]()
 
-Asegúrate de tener las credenciales de AWS necesarias configuradas en tu máquina antes de ejecutar estos comandos.
+## Despliegue con CloudFormation
+
+El directorio `cloudformation/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
+
+- `template.yaml`: Plantilla de CloudFormation que define la función Lambda y el rol IAM.
