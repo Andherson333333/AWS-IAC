@@ -1,7 +1,3 @@
-# Infraestructura de AWS con Terraform
-
-Este proyecto utiliza Terraform para configurar una infraestructura escalable y altamente disponible en AWS. Incluye una VPC, subredes públicas y privadas, un Application Load Balancer y un Auto Scaling Group para instancias EC2.
-
 ## Índice de contenidos
 - [¿Qué es AWS?](#qué-es-aws)
 - [¿Qué es EC2?](#qué-es-ec2)
