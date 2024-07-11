@@ -67,7 +67,7 @@ Nota: Al desplegar lambda se creara sin un evnto , eso quiere decir que el evnto
    terraform apply
    ```
 
-![Terraform 1]()
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20lambda%20service/imagenes/lambda-1.png)
 
 ## Despliegue con CloudFormation
 
