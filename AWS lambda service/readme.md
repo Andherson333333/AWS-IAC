@@ -71,6 +71,6 @@ Nota: Al desplegar lambda se creara sin un evnto , eso quiere decir que el evnto
 
 ## Despliegue con CloudFormation
 
-El directorio `cloudformation/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
+El directorio `Cloudformation-code/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
 
-- `template.yaml`: Plantilla de CloudFormation que define la función Lambda y el rol IAM.
+- `stack.yml`: Plantilla de CloudFormation que define la función Lambda y el rol IAM.
