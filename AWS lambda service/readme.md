@@ -46,6 +46,8 @@ El directorio `terraform/` contiene archivos de configuración de Terraform para
 
 Nota: Al desplegar lambda se creara sin un evnto , eso quiere decir que el evnto se tiene que crear de forma manual
 
+![Terraform 1]()
+
 ## Despliegue con CloudFormation
 
 El directorio `cloudformation/` contiene una plantilla de CloudFormation para desplegar la función Lambda:
