@@ -1,9 +1,14 @@
-## Índice de contenidos
+# Proyecto de Despliegue de AWS EC2
+
+Este proyecto demuestra cómo desplegar instancias Amazon EC2 utilizando tanto CloudFormation como Terraform.
+
+## Tabla de Contenidos
 - [¿Qué es AWS?](#qué-es-aws)
 - [¿Qué es EC2?](#qué-es-ec2)
-- [Tipos de instancias](#tipos-de-instancias)
-- [Formas de crear un EC2](#formas-de-crear-un-ec2)
-- [Parámetros principales de un EC2](#parámetros-principales-de-un-ec2)
+- [Tipos de Instancias](#tipos-de-instancias)
+- [Formas de Crear una Instancia EC2](#formas-de-crear-una-instancia-ec2)
+- [Parámetros Principales de EC2](#parámetros-principales-de-ec2)
+- [Estructura del Proyecto](#estructura-del-proyecto)
 - [Creación de EC2 con CloudFormation](#creación-de-ec2-con-cloudformation)
 - [Creación de EC2 con Terraform](#creación-de-ec2-con-terraform)
 
@@ -15,27 +20,27 @@ AWS (Amazon Web Services) es una plataforma de servicios en la nube ofrecida por
 
 EC2 (Elastic Compute Cloud) es un servicio de computación en la nube que proporciona capacidad informática escalable en la nube. Permite a los usuarios ejecutar máquinas virtuales (instancias) en la infraestructura de AWS. Estas instancias pueden ser configuradas con diversos sistemas operativos, tamaños de CPU, memoria, almacenamiento y otros recursos según las necesidades del usuario.
 
-## Tipos de instancias
+## Tipos de Instancias
 
-Hay muchos tipos de instancia EC2 que varían en diferentes componentes como red, CPU, memoria, almacenamiento, etc. Dependiendo de la variación, cambiará su nombre:
+Hay muchos tipos de instancias EC2 que varían en diferentes componentes como red, CPU, memoria, almacenamiento, etc. Dependiendo de la variación, cambiará su nombre:
 
-- `T2`: General Purpose (Propósito General) - Desarrollo, pruebas, pequeñas cargas de trabajo
-- `C5`: Compute Optimized (Optimizado para Cómputo) - Análisis de datos, procesamiento por lotes
-- `R5`: Memory Optimized (Optimizado para Memoria) - Bases de datos en memoria, análisis de datos
-- `I3`: Storage Optimized (Optimizado para Almacenamiento) - Bases de datos NoSQL, análisis intensivos en disco
-- `P3`: Accelerated Computing (Cómputo Acelerado) - Modelado 3D, aprendizaje profundo (deep learning)
-- `H1`: Storage Optimized (Optimizado para Almacenamiento) - Procesamiento de datos en paralelo, análisis de registros
+- `T2`: Propósito General - Desarrollo, pruebas, cargas de trabajo pequeñas
+- `C5`: Optimizado para Cómputo - Análisis de datos, procesamiento por lotes
+- `R5`: Optimizado para Memoria - Bases de datos en memoria, análisis de datos
+- `I3`: Optimizado para Almacenamiento - Bases de datos NoSQL, análisis intensivos en disco
+- `P3`: Cómputo Acelerado - Modelado 3D, aprendizaje profundo
+- `H1`: Optimizado para Almacenamiento - Procesamiento de datos en paralelo, análisis de registros
 
-## Formas de crear un EC2
+## Formas de Crear una Instancia EC2
 
-Se puede desplegar un EC2 de varios métodos:
+Una instancia EC2 puede desplegarse a través de varios métodos:
 
-- **Interfaz web (GUI)**: Accedes a la consola de AWS a través de un navegador web
-- **Terraform**: Herramienta de infraestructura como código (IaC) que te permite definir y gestionar la infraestructura de AWS de manera declarativa
+- **Interfaz Web (GUI)**: Acceso a la consola de AWS a través de un navegador web
+- **Terraform**: Herramienta de Infraestructura como Código (IaC) que permite definir y gestionar la infraestructura de AWS de manera declarativa
 - **CloudFormation**: Permite crear y gestionar recursos de manera automatizada utilizando plantillas de infraestructura
-- **SDK** (Software Development Kit): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc.
+- **SDK** (Kit de Desarrollo de Software): AWS proporciona SDKs para varios lenguajes de programación, como Python, Java, Node.js, etc.
 
-## Parámetros principales de un EC2
+## Parámetros Principales de EC2
 
 - `image-id`
 - `instance-type`
@@ -43,43 +48,62 @@ Se puede desplegar un EC2 de varios métodos:
 - `security-group-ids`
 - `subnet-id`
 
+## Estructura del Proyecto
+```
+.
+├── Cloudformation-code/
+│   └── main.yaml
+├── terraform-code/
+│   ├── main.tf
+│   ├── variables.tf
+│   └── terraform.tfvars
+└── README.md
+```
 ## Creación de EC2 con CloudFormation
 
-1. Crear archivo en formato YAML o JSON
-2. Ir a la documentación AWS CloudFormation: [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html)
-3. Verificar los parámetros para crear una instancia EC2
-4. Crear un stack y subir el archivo YAML creado
+1. Navega al directorio `Cloudformation-code`
+2. Revisa el archivo `main.yaml`
+3. Ve a AWS CloudFormation en la Consola de AWS
+4. Crea una nueva pila y sube el archivo `main.yaml`
 
-![CloudFormation 1](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-1.PNG)
-![CloudFormation 2](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-2.PNG)
-![CloudFormation 3](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/cloudfmation-3.PNG)
+Para una guía visual del proceso, consulta las siguientes imágenes:
+- ![CloudFormation 1](imagenes/cloudfmation-1.PNG)
+- ![CloudFormation 2](imagenes/cloudfmation-2.PNG)
+- ![CloudFormation 3](imagenes/cloudfmation-3.PNG)
 
 ## Creación de EC2 con Terraform
 
-1. Crear la estructura de archivos (generalmente está compuesta por 4 archivos mínimo base):
-   - `provider.tf`: Este archivo se utiliza para especificar el proveedor de servicios cloud que se está utilizando
-   - `main.tf`: Este es el archivo principal donde se define la mayoría de los recursos
-   - `outputs.tf`: Este archivo se utiliza para definir las salidas que se mostrarán después de que Terraform haya aplicado los cambios
-   - `variables.tf`: Este archivo se utiliza para definir las variables que se utilizarán en el archivo main.tf
+1. Navega al directorio `terraform-code`
+2. Revisa los archivos de Terraform:
+   - `main.tf`: Define el recurso de la instancia EC2
+   - `variables.tf`: Declara las variables de entrada
+   - `terraform.tfvars`: Establece los valores para las variables
 
-2. Crear archivos que terminen en `.tf`
+3. Inicializa Terraform:
+   ```
+   terraform init
+   ```
+   ![Terraform Init](imagenes/terrafomr-2.PNG)
 
-![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-1.PNG)
+4. Planifica el despliegue:
+   ```
+   terraform plan
+   ```
+   ![Terraform Plan](imagenes/terrafomr-3.PNG)
 
-3. Implementar código
-4. Desplegar (se usan los siguientes comandos):
+5. Aplica los cambios:
+   ```
+   terraform apply
+   ```
+   ![Terraform Apply 1](imagenes/terrafomr-4.PNG)
+   ![Terraform Apply 2](imagenes/terrafomr-5.PNG)
 
-- `terraform init`
+Para ver el contenido de los archivos de Terraform, consulta los archivos en el directorio `terraform-code`.
 
-![Terraform 2](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-2.PNG)
+## Contribuciones
 
-- `terraform plan`
+¡Las contribuciones son bienvenidas! Por favor, siéntete libre de enviar un Pull Request.
 
-![Terraform 3](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-3.PNG)
+## Licencia
 
-- `terraform apply`
-
-![Terraform 4](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-4.PNG)
-![Terraform 5](https://github.com/Andherson333333/AWS-IAC/blob/main/EC2%20servicio/imagenes/terrafomr-5.PNG)
-
-- `terraform destroy`
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
