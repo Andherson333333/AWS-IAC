@@ -99,11 +99,3 @@ Para una guía visual del proceso, consulta las siguientes imágenes:
    ![Terraform Apply 2](imagenes/terrafomr-5.PNG)
 
 Para ver el contenido de los archivos de Terraform, consulta los archivos en el directorio `terraform-code`.
-
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Por favor, siéntete libre de enviar un Pull Request.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
