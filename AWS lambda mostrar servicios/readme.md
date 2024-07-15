@@ -24,6 +24,7 @@ Este proyecto utiliza Terraform para desplegar una función AWS Lambda que reali
 └── README.md            # Este archivo
 ```
 
+
 ## Configuración y Despliegue
 
 1. Modifica `terraform.tfvars` si necesitas personalizar alguna variable.
@@ -44,6 +45,8 @@ Este proyecto utiliza Terraform para desplegar una función AWS Lambda que reali
    ```
 
 5. Confirma la creación de los recursos escribiendo `yes` cuando se te solicite.
+
+Nota:Colocar el tiempo alrededor de 15 segundos 
 
 ## Uso
 Una vez desplegado, la función Lambda se ejecutará automáticamente según la programación configurada. Para verificar su funcionamiento:
