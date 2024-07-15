@@ -92,14 +92,3 @@ Para eliminar todos los recursos creados:
 ```
 terraform destroy
 ```
-
-## Contribuir
-Las contribuciones son bienvenidas. Por favor, abre un issue para discutir cambios mayores antes de enviar un pull request.
-
-## Licencia
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Contacto
-Tu Nombre - [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)
-
-Enlace del Proyecto: [https://github.com/tu-usuario/aws-resource-inventory-lambda](https://github.com/tu-usuario/aws-resource-inventory-lambda)
