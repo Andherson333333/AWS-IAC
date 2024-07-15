@@ -25,30 +25,25 @@ Este proyecto utiliza Terraform para desplegar una función AWS Lambda que reali
 ```
 
 ## Configuración y Despliegue
-1. Clona este repositorio:
-   ```
-   git clone https://github.com/tu-usuario/aws-resource-inventory-lambda.git
-   cd aws-resource-inventory-lambda
-   ```
 
-2. Modifica `terraform.tfvars` si necesitas personalizar alguna variable.
+1. Modifica `terraform.tfvars` si necesitas personalizar alguna variable.
 
-3. Inicializa Terraform:
+2. Inicializa Terraform:
    ```
    terraform init
    ```
 
-4. Revisa los cambios planificados:
+3. Revisa los cambios planificados:
    ```
    terraform plan
    ```
 
-5. Aplica la configuración:
+4. Aplica la configuración:
    ```
    terraform apply
    ```
 
-6. Confirma la creación de los recursos escribiendo `yes` cuando se te solicite.
+5. Confirma la creación de los recursos escribiendo `yes` cuando se te solicite.
 
 ## Uso
 Una vez desplegado, la función Lambda se ejecutará automáticamente según la programación configurada. Para verificar su funcionamiento:
