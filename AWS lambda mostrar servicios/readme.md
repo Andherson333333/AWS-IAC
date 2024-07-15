@@ -87,3 +87,11 @@ Para eliminar todos los recursos creados:
 ```
 terraform destroy
 ```
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20lambda%20mostrar%20servicios/imagenes/lambda-1.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20lambda%20mostrar%20servicios/imagenes/lambda-2.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20lambda%20mostrar%20servicios/imagenes/lambda-3.png)
+
+
