@@ -1,10 +1,13 @@
+# Import required libraries
 import boto3
 import json
 from botocore.config import Config
 
+# Function to get the list of active services
 def get_active_services():
     return ['ec2', 's3', 'lambda', 'rds', 'dynamodb', 'ecs', 'eks', 'elasticache', 'redshift', 'sqs']
 
+# Helper functions to get resources for each AWS service
 def get_ec2_resources(ec2):
     instances = ec2.describe_instances(MaxResults=1000)
     return [instance['InstanceId'] for reservation in instances['Reservations'] for instance in reservation['Instances']]
@@ -45,13 +48,16 @@ def get_sqs_resources(sqs):
     queues = sqs.list_queues()
     return queues.get('QueueUrls', [])
 
+# Main Lambda function
 def lambda_handler(event, context):
+    # Configure boto3 clients
     config = Config(
         retries = {'max_attempts': 2},
         connect_timeout=5, 
         read_timeout=5
     )
     
+    # Create session and clients for each service
     session = boto3.Session()
     clients = {
         'ec2': session.client('ec2', config=config),
@@ -67,6 +73,7 @@ def lambda_handler(event, context):
     }
     
     try:
+        # Collect resources for each service
         resources = {
             'ec2_instances': get_ec2_resources(clients['ec2']),
             's3_buckets': get_s3_resources(clients['s3']),
@@ -80,24 +87,27 @@ def lambda_handler(event, context):
             'sqs_queues': get_sqs_resources(clients['sqs'])
         }
 
+        # Calculate statistics and summary
         resource_counts = {f"{key}_count": len(value) for key, value in resources.items()}
         total_count = sum(resource_counts.values())
-
         summary = {
             'resource_counts': resource_counts,
             'total_resources': total_count
         }
 
+        # Prepare final result
         result = {
             'summary': summary,
             'details': resources
         }
         
+        # Return successful response
         return {
             'statusCode': 200,
             'body': json.dumps(result, indent=2)
         }
     except Exception as e:
+        # Handle errors and return error response
         return {
             'statusCode': 500,
             'body': json.dumps({
