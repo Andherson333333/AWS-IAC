@@ -20,20 +20,20 @@ Es un servicio gestionado de Kubernetes ofrecido por Amazon Web Services (AWS). 
 
 ## Formas de despliegue
 
-Interfaz Web
-Eksclt (cloudformation)
-Terrafomr
-Cloudformation
+- Interfaz Web
+- Eksclt (cloudformation)
+- Terrafomr
+- Cloudformation
 
 ## Requistos
 
-AWS CLI (Login)
-kubeclt
+- AWS CLI (Login)
+- kubeclt
 
 ## Componentes
 
-VPC
-EKS
+- VPC
+- EKS
 
 
 
