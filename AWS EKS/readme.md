@@ -1,4 +1,4 @@
-## Que es EKS?
+## ¿Que es EKS?
 
 Es un servicio gestionado de Kubernetes ofrecido por Amazon Web Services (AWS). Permite ejecutar Kubernetes en la nube de AWS sin necesidad de instalar y operar tu propio plano de control de Kubernetes.
 
