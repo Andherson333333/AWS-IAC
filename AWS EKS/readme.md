@@ -19,21 +19,22 @@ Es un servicio gestionado de Kubernetes ofrecido por Amazon Web Services (AWS). 
 | Complejidad de configuración | Alta | Baja | Media | Alta |
 
 ## Formas de despliegue
+- Consola de AWS (Interfaz Web)
+- eksctl (herramienta de línea de comandos que utiliza CloudFormation)
+- Terraform
+- AWS CloudFormation
 
-- Interfaz Web
-- Eksclt (cloudformation)
-- Terrafomr
-- Cloudformation
+## Requisitos
+- Cuenta de AWS
+- AWS CLI configurado
+- kubectl instalado y configurado
+- Roles y políticas IAM apropiados
+- VPC configurada con subredes públicas y privadas
 
-## Requistos
-
-- AWS CLI (Login)
-- kubeclt
-
-## Componentes
-
-- VPC
-- EKS
+## Componentes principales
+- Plano de control gestionado de Kubernetes
+- Nodos de trabajo (EC2, Fargate, etc.)
+- VPC y configuración de red
 
 
 
