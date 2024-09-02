@@ -41,3 +41,23 @@ To configure a remote backend with AWS S3, you need two resources before applyin
    [default]
    aws_access_key_id = YOUR_ACCESS_KEY_ID
    aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+
+
+2. **Terraform Structure**
+   - main-tf
+   - variables.tf
+   - output.tf
+   - provider.tf
+   - backend.tf
+
+3.  **Use Terraform commands to initialize**:
+```
+terraform init
+```
+```
+terrafomr plan
+```
+```
+terrafomr apply
+```
+
