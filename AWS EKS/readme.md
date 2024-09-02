@@ -1,8 +1,9 @@
-Que es EKS?
+## Que es EKS?
 
 Es un servicio gestionado de Kubernetes ofrecido por Amazon Web Services (AWS). Permite ejecutar Kubernetes en la nube de AWS sin necesidad de instalar y operar tu propio plano de control de Kubernetes.
 
-Tipos
+## Tipos de nodos en EKS
+
 | Característica | Nodos EC2 | Fargate | Nodos Gestionados | Nodos Spot |
 |----------------|-----------|---------|-------------------|------------|
 | Gestión de infraestructura | Manual | Automática | Semi-automática | Manual |
@@ -17,19 +18,19 @@ Tipos
 | Integración con servicios AWS | Completa | Buena | Completa | Completa |
 | Complejidad de configuración | Alta | Baja | Media | Alta |
 
-Formas de despliegue
+## Formas de despliegue
 
 Interfaz Web
 Eksclt (cloudformation)
 Terrafomr
 Cloudformation
 
-Requistos
+## Requistos
 
 AWS CLI (Login)
 kubeclt
 
-Componentes
+## Componentes
 
 VPC
 EKS
