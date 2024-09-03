@@ -21,7 +21,7 @@ module "eks" {
   control_plane_subnet_ids = module.vpc.intra_subnets
 
   eks_managed_node_groups = {
-    karpenter = {
+    General = {
       instance_types = ["t3.medium"]
       min_size     = 1
       max_size     = 10
