@@ -12,10 +12,8 @@ module "eks" {
 
   cluster_addons = {
     coredns                = {}
-  #  eks-pod-identity-agent = {}
     kube-proxy             = {}
     vpc-cni                = {}
- #   aws-ebs-csi-driver     = {service_account_role_arn = module.eks-pod-identity.iam_role_arn}
   }
 
   vpc_id                   = module.vpc.vpc_id
@@ -30,10 +28,6 @@ module "eks" {
       desired_size = 1
     }
   }
-
-  node_security_group_tags = merge(local.tags, {
-    "karpenter.sh/discovery" = local.name
-  })
 
   tags = local.tags
 }
