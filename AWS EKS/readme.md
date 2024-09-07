@@ -38,7 +38,7 @@ Es un servicio gestionado de Kubernetes ofrecido por Amazon Web Services (AWS). 
 
 ## Despligues Terraform
 
-Hay configuraciones terrafomr :
+Hay 2 configuraciones en terraform :
 
-- `Terraform-code1 :` Esta configurada con modulos hecho por la comunidad vpc,eks .
+- `Terraform-code1 :` Esta configurada con modulos hecho por la comunidad vpc , eks .
 - `Terraform-code2 :` Esta configurado sin modulo a diferencia de eks un solo .tf en el eks esta separado por node.tf y eks.tf que es el control plane lo demas es lo mismo
