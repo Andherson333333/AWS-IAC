@@ -1,3 +1,24 @@
+# Visión General
+
+La configuración de Terraform en este proyecto configura:
+
+1. Una VPC con subredes públicas, privadas e internas
+2. Un cluster EKS
+3. Un grupo de nodos gestionados de EKS
+
+## Prerrequisitos
+
+- Terraform (>= 1.0)
+- AWS CLI configurado con las credenciales apropiadas
+- kubectl
+- helm
+
+## Versiones de Proveedores
+
+- Proveedor AWS (>= 5.0)
+- Proveedor kubectl (>= 1.14.0)
+- Proveedor Helm (>= 2.9.0)
+
 ## Configuración
 
 ### Variables Locales
@@ -24,4 +45,3 @@
 ## Personalización
 
 Puedes personalizar el despliegue modificando las variables locales y las configuraciones de los módulos en los archivos de Terraform.
-
