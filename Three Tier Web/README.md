@@ -1,4 +1,4 @@
-# Taller de Arquitectura Web de Tres Niveles en AWS
+# AWS TriTier: Infraestructura Web Escalable con Terraform
 
 Este proyecto implementa una arquitectura web de tres niveles en AWS utilizando Terraform. La arquitectura incluye un nivel web público, un nivel de aplicación privado y una base de datos Aurora MySQL.
 
