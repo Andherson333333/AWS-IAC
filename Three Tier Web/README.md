@@ -1,5 +1,9 @@
 # AWS TriTier: Infraestructura Web Escalable con Terraform
 
+## Architecture Overview
+![Architecture Diagram](https://github.com/aws-samples/aws-three-tier-web-architecture-workshop/blob/main/application-code/web-tier/src/assets/3TierArch.png)
+
+
 Este proyecto implementa una arquitectura web de tres niveles en AWS utilizando Terraform. La arquitectura incluye un nivel web público, un nivel de aplicación privado y una base de datos Aurora MySQL.
 
 ## Descripción
