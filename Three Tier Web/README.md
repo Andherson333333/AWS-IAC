@@ -26,9 +26,4 @@ Esta arquitectura consta de:
 - Terraform instalado
 - AWS CLI configurado
 
-## Despliegue
-
-1. Clona este repositorio
-2. Navega al directorio del proyecto
-3. Inicializa Terraform:
 
