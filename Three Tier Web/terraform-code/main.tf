@@ -558,7 +558,3 @@ resource "aws_iam_instance_profile" "web" {
   name = "${local.name}-web-instance-profile"
   role = aws_iam_role.web.name
 }
-
-###############################################################################
-# IAM Role and Instance Profile web externo
-###############################################################################
