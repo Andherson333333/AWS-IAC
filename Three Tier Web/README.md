@@ -32,6 +32,8 @@ Esta arquitectura consta de:
 
 ## Despligue
 
+Para configurar las ami se puede realizar con este documentacion https://catalog.us-east-1.prod.workshops.aws/workshops/85cd2bb2-7f79-4e96-bdee-8078e469752a/en-US/part6/autoscaling
+
 - 1 Configurar el de App tier
     - Instalar mysql cliente configurar 
     - Verificar el endpoint de RDS
