@@ -30,4 +30,22 @@ Esta arquitectura consta de:
 - Terraform instalado
 - AWS CLI configurado
 
+## Despligue
+
+- 1 Configurar el de App tier
+    - Instalar mysql cliente configurar 
+    - Verificar el endpoint de RDS
+    - Cofigurar el arhcivo Db.config.js en la ubicacion /app-tier
+    - Crear un ami de la instancia
+      
+- 2 Configurar el de Nginx
+   - Verificar el loadbalancer interno
+   - Configurar nginx
+   - Verificar conecion
+   - Crear un ami de la instancia
+     
+- 3 Sustituir el ami en el terrafomr
+
+  
+
 
