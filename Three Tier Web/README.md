@@ -47,7 +47,22 @@ Para configurar las ami se puede realizar con este documentacion https://catalog
    - Crear un ami de la instancia
      
 - 3 Sustituir el ami en el terrafomr
-- 4 Aplicar terraform code 
   
+- 4 Aplicar terraform code
+  - vpc
+  - ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-8.png)
+  - Loadbalancer
+  - ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-6.png)
+  - EC2
+  - ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-5.png)
+  - RDS 
+    ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-7.png)
+  - Web
+![Architecture Diagram]([https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-5.png](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-2.png))
 
+ ![Architecture Diagram]([https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-3.png)
+
+![Architecture Diagram]([[https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-3.png](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-4.png))
+ 
+  
 
