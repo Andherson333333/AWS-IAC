@@ -58,9 +58,9 @@ Para configurar las ami se puede realizar con este documentacion https://catalog
   - RDS 
     ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-7.png)
   - Web
-![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-3.png)
-
- ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-4.png)
+  - ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-3.png)
+   - Base de datos  
+  - ![Architecture Diagram](https://github.com/Andherson333333/AWS-IAC/blob/main/Three%20Tier%20Web/imagenes/project-T3-4.png)
 
  
   
