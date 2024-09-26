@@ -47,7 +47,7 @@ Para configurar las ami se puede realizar con este documentacion https://catalog
    - Crear un ami de la instancia
      
 - 3 Sustituir el ami en el terrafomr
-
+- 4 Aplicar terraform code 
   
 
 
