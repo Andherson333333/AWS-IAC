@@ -2,6 +2,10 @@
 
 Este repositorio contiene archivos de configuración de Terraform para desplegar un clúster de Amazon EKS (Elastic Kubernetes Service) con almacenamiento persistente utilizando AWS EBS CSI Driver. Esta configuración proporciona una solución completa de almacenamiento para aplicaciones que requieren persistencia de datos en Kubernetes.
 
+## AWS EBS (Elastic Block Store)
+
+EBS es un servicio de almacenamiento en bloque de AWS diseñado para ser usado con Amazon EC2 y Amazon EKS. Es similar a un disco duro virtual en la nube.
+
 ## Descripción General de la Arquitectura
 
 La configuración crea:
@@ -16,7 +20,6 @@ La configuración crea:
 - AWS CLI configurado con credenciales apropiadas
 - kubectl
 - Helm >= 2.9.0
-- Terrafomr 
 
 ## Instalacion
 
