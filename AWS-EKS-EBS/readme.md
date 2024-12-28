@@ -1,6 +1,6 @@
 # Configuración de Clúster EKS con Terraform
 
-Este repositorio contiene archivos de configuración de Terraform para desplegar un clúster de Amazon EKS (Elastic Kubernetes Service) con recursos asociados en AWS.
+Este repositorio contiene archivos de configuración de Terraform para desplegar un clúster de Amazon EKS (Elastic Kubernetes Service) con almacenamiento persistente utilizando AWS EBS CSI Driver. Esta configuración proporciona una solución completa de almacenamiento para aplicaciones que requieren persistencia de datos en Kubernetes.
 
 ## Descripción General de la Arquitectura
 
