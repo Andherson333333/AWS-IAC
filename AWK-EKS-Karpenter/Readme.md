@@ -2,6 +2,22 @@
 
 Este repositorio contiene la configuración de Terraform para desplegar un cluster Amazon EKS con Karpenter para el aprovisionamiento y escalado automático de nodos.
 
+## Karpenter
+
+Karpenter es un planificador de nodos automático (node autoscaler) de código abierto para Kubernetes en AWS. Sus principales características son:
+
+* Se integra directamente con AWS para provisionar nodos (instancias EC2) de forma dinámica basándose en las necesidades de los pods pendientes en el clúster.
+
+* A diferencia de Cluster Autoscaler, Karpenter puede seleccionar diferentes tipos de instancias EC2 y zonas de disponibilidad para optimizar el costo y la disponibilidad.
+
+* Toma decisiones de escalado en segundos, lo que permite una respuesta más rápida a los cambios en la demanda de recursos.
+
+* Puede consolidar eficientemente las cargas de trabajo mediante la migración de pods y la terminación de nodos infrautilizados.
+
+* Soporta características avanzadas como spot instances, ARM y x86, distintas familias de instancias, y múltiples zonas de disponibilidad.
+
+* Se configura mediante CRDs (Custom Resource Definitions) de Kubernetes que permiten definir políticas de provisión flexibles.
+
 ## Prerrequisitos
 
 - AWS CLI configurado
