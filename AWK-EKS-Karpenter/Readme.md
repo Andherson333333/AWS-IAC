@@ -115,6 +115,7 @@ The Terraform code is organized into modules and resources to facilitate deploym
 │   ├── karpenter-namespace.tf   # Dedicated namespace
 │   └── karpenter-nodes.tf    # NodeClass and NodePool
 └── README.md                 # Documentation
+    ReadmeES.md               # Español
 ```
 
 ### Creation Order
