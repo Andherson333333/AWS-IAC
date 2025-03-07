@@ -73,8 +73,8 @@ Este repositorio ofrece dos enfoques diferentes para implementar EKS:
 
 ## Idiomas
 
-- [English](./README.md)
-- [Español](./README.es.md)
+- [English](./readme.md)
+- [Español](./readmeES.md)
 
 
 
