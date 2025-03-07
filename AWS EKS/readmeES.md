@@ -1,79 +1,81 @@
-# Amazon EKS (Elastic Kubernetes Service)
+# AWS EKS con Terraform
 
-Este repositorio tiene el propósito de explicar qué es EKS y también desplegarlo con Terraform, con dos configuraciones posibles:
+Este repositorio contiene recursos para implementar Amazon Elastic Kubernetes Service (EKS) mediante Terraform, con dos enfoques diferentes.
 
-- **Terraform1**: Usando módulos.
-- **Terraform2**: Sin módulos.
+## Contenido del Repositorio
 
-## Requisitos
+- **[terraform-code1](./terraform-code1)**: Implementación de EKS utilizando módulos de Terraform.
+- **[terraform-code2](./terraform-code2)**: Implementación de EKS sin utilizar módulos (recursos nativos).
+- **[Documentación General de EKS](./docs/EKS-overview.md)**: Conceptos fundamentales de EKS.
 
-- AWS CLI
-- Terraform
+## Estructura del Proyecto
 
-## Despliegue
-
-1. **Inicializar Terraform**:
-   ```
-   terraform init
-   ```
-
-2. **Planificar la infraestructura**:
-   ```
-   terraform plan
-   ```
-
-3. **Destruir la infraestructura**:
-   ```
-   terraform destroy
-   ```
+```
+AWS EKS/
+│
+├── terraform-code1/               # Implementación usando módulos de Terraform
+│   ├── data.tf                    # Data sources (zonas de disponibilidad)
+│   ├── eks.tf                     # Configuración del módulo EKS
+│   ├── local.tf                   # Variables locales (región, nombre, etc.)
+│   ├── provider.tf                # Configuración de proveedores
+│   ├── readme.md                  # Documentación específica
+│   └── vpc.tf                     # Configuración del módulo VPC
+│
+├── terraform-code2/               # Implementación sin usar módulos
+│   ├── eks.tf                     # Recursos nativos para el cluster EKS
+│   ├── local.tf                   # Variables locales
+│   ├── node-eks.tf                # Configuración de nodos trabajadores
+│   ├── provider.tf                # Configuración de proveedores
+│   ├── readme.md                  # Documentación específica
+│   └── vpc.tf                     # Recursos nativos para VPC
+│
+├── docs/                          # Documentación general
+│   └── EKS-overview.md            # Conceptos fundamentales de EKS
+│
+├── imagenes/                      # Imágenes para la documentación
+│   └── txt                        # Placeholder
+│
+├── readme.md                      # Este archivo (versión en inglés)
+└── readmeES.md                    # Versión en español
+```
 
 ## ¿Qué es Amazon EKS?
-Amazon Elastic Kubernetes Service (EKS) es un servicio administrado que facilita la ejecución de Kubernetes en AWS sin la necesidad de instalar, operar y mantener un plano de control de Kubernetes. Kubernetes es una plataforma de código abierto para la gestión de aplicaciones en contenedores, y Amazon EKS simplifica su uso al encargarse de las tareas complejas asociadas con la administración de clústeres.
 
-## ¿Qué es el Control Plane?
-El plano de control (control plane) en EKS es responsable de la gestión y coordinación del clúster de Kubernetes. Incluye componentes como:
-- **API Server**: Gestiona las solicitudes entrantes de los usuarios y aplicaciones.
-- **Etcd**: Almacén de datos clave-valor que guarda el estado de todo el clúster.
-- **Scheduler**: Asigna recursos a los pods basándose en las necesidades declaradas.
-- **Controller Manager**: Supervisa y mantiene el estado deseado de los objetos del clúster.
+Amazon Elastic Kubernetes Service (EKS) es un servicio gestionado de AWS que facilita la ejecución de Kubernetes sin necesidad de instalar y mantener tu propio plano de control. [Leer más sobre EKS →](./docs/EKS-overview.md)
 
-En Amazon EKS, el plano de control está completamente administrado por AWS y se distribuye en varias zonas de disponibilidad para garantizar alta disponibilidad y tolerancia a fallos.
+## Enfoques de Implementación
 
-## ¿Qué son los Worker Nodes?
-Los nodos de trabajo (worker nodes) son las máquinas virtuales (EC2 instances) que ejecutan las aplicaciones en contenedores y están controladas por el plano de control. Los nodos de trabajo contienen:
-- **kubelet**: Comunica las instrucciones del plano de control al nodo y supervisa los pods.
-- **Runtime de contenedores**: Ejecuta los contenedores (Docker, containerd, etc.).
-- **Kube-proxy**: Gestiona las reglas de red y permite la comunicación entre pods y servicios.
+Este repositorio ofrece dos enfoques diferentes para implementar EKS:
 
-## Tipos de Clústeres en Amazon EKS
-1. **Clústeres Administrados**:
-   - AWS gestiona el plano de control.
-   - Los usuarios son responsables de los nodos de trabajo (self-managed nodes) o pueden usar nodos administrados por EKS (EKS Managed Nodes).
+### Enfoque 1: Usando Módulos de Terraform (terraform-code1)
 
-2. **EKS Anywhere**:
-   - Permite ejecutar Kubernetes on-premises con soporte de AWS.
+- **Ventajas**: Código más conciso, mantenimiento más sencillo, implementación rápida
+- **Caso de uso ideal**: Equipos que necesitan desplegar rápidamente un cluster EKS estándar
+- **[Ver implementación →](./terraform-code1)**
 
-3. **EKS en AWS Fargate**:
-   - Ejecuta pods en un entorno serverless sin necesidad de gestionar nodos.
+### Enfoque 2: Sin Módulos (terraform-code2)
 
-## Diferencias Clave
-| Característica             | Administrado por AWS            | Nodos Auto-gestionados           |
-|-----------------------------|----------------------------------|-----------------------------------|
-| **Plano de Control**        | Totalmente administrado         | Administrado por AWS             |
-| **Nodos de Trabajo**        | EKS Managed Nodes o Fargate     | EC2 instances administradas por el usuario |
-| **Escalabilidad Automática**| Soportada en Fargate y EKS Autoscaler | Requiere configuración manual   |
-| **Operaciones On-premises** | EKS Anywhere                    | No disponible                    |
+- **Ventajas**: Control granular, mayor personalización, comprensión detallada de los recursos
+- **Caso de uso ideal**: Equipos que necesitan alta personalización o aprender sobre EKS
+- **[Ver implementación →](./terraform-code2)**
 
-## Ventajas de Amazon EKS
-- **Alta disponibilidad**: El plano de control está distribuido en múltiples zonas de disponibilidad.
-- **Integración con servicios de AWS**: Integrado con IAM, CloudWatch, ALB, entre otros.
-- **Flexibilidad**: Soporte para múltiples opciones de ejecución de nodos y entornos.
-- **Seguridad**: Encripción en reposo y tráfico seguro por defecto.
+## Documentación Disponible
 
-## Recursos Adicionales
-- [Documentación Oficial de Amazon EKS](https://docs.aws.amazon.com/eks/)
-- [Introducción a Kubernetes](https://kubernetes.io/docs/concepts/)
-- [Tutoriales de AWS para EKS](https://aws.amazon.com/getting-started/hands-on/)
+- [Conceptos fundamentales de EKS](./docs/EKS-overview.md)
+- [Guía de despliegue con módulos](./terraform-code1/README.md)
+- [Guía de despliegue sin módulos](./terraform-code2/README.md)
+
+## Requisitos Generales
+
+- AWS CLI configurado
+- Terraform ≥ 1.0
+- Conocimientos básicos de Kubernetes
+
+## Idiomas
+
+- [English](./README.md)
+- [Español](./README.es.md)
+
 
 
 
