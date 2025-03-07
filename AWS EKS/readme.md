@@ -6,7 +6,7 @@ This repository contains resources to implement Amazon Elastic Kubernetes Servic
 
 - **[terraform-code1](./terraform-code1)**: EKS implementation using Terraform modules.
 - **[terraform-code2](./terraform-code2)**: EKS implementation without using modules (native resources).
-- **[EKS General Documentation](./docs/EKS-overview.md)**: EKS fundamental concepts.
+- **[EKS General Documentation](./EKS-overview.md)**: EKS fundamental concepts.
 
 ## Project Structure
 
@@ -41,7 +41,7 @@ AWS EKS/
 
 ## What is Amazon EKS?
 
-Amazon Elastic Kubernetes Service (EKS) is an AWS managed service that facilitates running Kubernetes without the need to install and maintain your own control plane. [Read more about EKS →](./docs/EKS-overview.md)
+Amazon Elastic Kubernetes Service (EKS) is an AWS managed service that facilitates running Kubernetes without the need to install and maintain your own control plane. [Read more about EKS →](./EKS-overview.md)
 
 ## Implementation Approaches
 
