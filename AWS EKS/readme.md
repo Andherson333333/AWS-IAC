@@ -75,9 +75,7 @@ This repository offers two different approaches to implement EKS:
 
 ## Languages
 
-- [English](./README.md)
-- [Spanish](./README.es.md)
+- [English](./readme.md)
+- [Spanish](./readmeES.md)
 
-## License
 
-This project is under the [MIT](LICENSE) license
