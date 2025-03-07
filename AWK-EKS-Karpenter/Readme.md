@@ -326,13 +326,6 @@ Make sure you have AWS credentials configured:
 aws configure
 ```
 
-Clone the repository and initialize Terraform:
-```bash
-git clone <repo-url>
-cd <repo-dir>
-terraform init
-```
-
 ### 2. Customization (optional)
 
 You can modify key variables in `locals.tf`:
