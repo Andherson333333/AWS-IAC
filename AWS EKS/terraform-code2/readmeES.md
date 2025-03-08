@@ -4,6 +4,10 @@ Este directorio contiene código Terraform para implementar Amazon EKS utilizand
 
 ## Arquitectura
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-permisis-1.png)
+
 Esta implementación crea:
 
 - VPC personalizada con subredes públicas y privadas
