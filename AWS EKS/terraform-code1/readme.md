@@ -4,6 +4,10 @@ This directory contains Terraform code to implement Amazon EKS using the officia
 
 ## Architecture
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-permisis-1.png)
+
 This implementation creates:
 
 - VPC with public, private, and intra subnets (using the `terraform-aws-modules/vpc/aws` module)
