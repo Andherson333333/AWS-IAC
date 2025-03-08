@@ -4,6 +4,10 @@ Este directorio contiene código Terraform para implementar Amazon EKS utilizand
 
 ## Arquitectura
 
+![Terraform 1]()
+
+![Terraform 1]()
+
 Esta implementación crea:
 
 - VPC con subredes públicas, privadas e intra (utilizando el módulo `terraform-aws-modules/vpc/aws`)
