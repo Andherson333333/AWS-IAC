@@ -26,11 +26,16 @@ Karpenter is an open-source node autoscaler for Kubernetes on AWS. Its main feat
 
 ## Architecture
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenet-2.png)
+
 The configuration includes:
 - VPC with public, private, and internal subnets in 2 availability zones
 - EKS Cluster (version 1.30)
 - Karpenter Autoscaler
 - Main EKS addons (CoreDNS, kube-proxy, vpc-cni, pod-identity-agent)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-permisos-1.png)
+
 
 ### Network Architecture and Components
 
