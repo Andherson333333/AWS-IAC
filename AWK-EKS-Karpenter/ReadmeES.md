@@ -26,11 +26,16 @@ Karpenter es un planificador de nodos automático (node autoscaler) de código a
 
 ## Arquitectura
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenet-2.png)
+
+
 La configuración incluye:
 - VPC con subredes públicas, privadas e internas en 2 zonas de disponibilidad
 - Cluster EKS (versión 1.30)
 - Autoescalador Karpenter
 - Addons principales de EKS (CoreDNS, kube-proxy, vpc-cni, pod-identity-agent)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-permisos-1.png)
 
 ### Arquitectura de Red y Componentes
 
