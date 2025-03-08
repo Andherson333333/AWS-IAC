@@ -4,6 +4,10 @@ This directory contains Terraform code to implement Amazon EKS using native Terr
 
 ## Architecture
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-permisis-1.png)
+
 This implementation creates:
 
 - Custom VPC with public and private subnets
