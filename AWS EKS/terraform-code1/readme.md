@@ -79,7 +79,6 @@ The EKS module configures:
 - Specific tags for integration with other AWS services
 - Official addons that enable basic cluster functionality
 
-![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
 
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-2.png)
 
