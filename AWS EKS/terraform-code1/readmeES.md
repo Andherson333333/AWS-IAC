@@ -79,8 +79,6 @@ El módulo EKS configura:
 - Etiquetas específicas para la integración con otros servicios de AWS
 - Addons oficiales que permiten la funcionalidad básica del cluster
 
-![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
-
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-2.png)
 
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-3.png)
