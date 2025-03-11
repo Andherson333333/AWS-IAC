@@ -371,6 +371,12 @@ kubectl get pods -n karpenter
 kubectl get nodeclass,nodepool
 ```
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-6.png)
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-5.png)
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-3.png)
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-8.png)
+
+
 ## Observation and Testing
 
 ### Testing Auto-scaling
