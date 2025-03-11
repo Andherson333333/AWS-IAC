@@ -102,8 +102,6 @@ All necessary roles and policies are explicitly defined:
      - Network operations with CNI
      - Container image downloads
      - 
-![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
-
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-2.png)
 
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-3.png)
