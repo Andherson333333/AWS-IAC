@@ -371,19 +371,19 @@ kubectl get pods -n karpenter
 kubectl get nodeclass,nodepool
 ```
 - Antes
-- 
+  
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-6.png)
 
 - Inflando para verificar que funcione
-- 
+  
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-5.png)
 
 - Verificacion creacion
-- 
+  
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-3.png)
 
 - Cerrando los nodos
-- 
+  
 ![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWK-EKS-Karpenter/imagenes/karpenter-8.png)
 
 
