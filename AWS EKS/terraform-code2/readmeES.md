@@ -102,6 +102,14 @@ Se definen explícitamente todos los roles y políticas necesarios:
      - Operaciones de red con CNI
      - Descarga de imágenes de contenedores
 
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-1.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-2.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-3.png)
+
+![Terraform 1](https://github.com/Andherson333333/AWS-IAC/blob/main/AWS%20EKS/imagenes/eks-4.png)
+
 ### Cluster EKS
 
 El cluster se configura con:
