@@ -67,3 +67,4 @@ Hay un script llamado `install.sh` donde se instalan los complementos necesarios
 
 ### Arquitecturas Completas
 - Three Tier Web
+- Robot shop
