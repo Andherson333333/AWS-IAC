@@ -1,0 +1,19 @@
+global:
+  nodeSelector:
+    node-type: infrastructure
+    workload-type: platform
+  # Toleration configuration for all components 
+  tolerations:
+  - key: "workload-type"
+    value: "infrastructure"
+    effect: "NoSchedule"
+base:
+  enabled: true
+istiod:
+  meshConfig:
+    enableTracing: true
+    extensionProviders:
+      - name: jaeger
+        opentelemetry:
+          port: 4317
+          service: jaeger-collector.istio-system.svc.cluster.local
