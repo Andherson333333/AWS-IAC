@@ -2,6 +2,13 @@
 
 Este proyecto permite realizar consultas en lenguaje natural a una base de datos PostgreSQL a través del Protocolo de Contexto de Modelo (MCP). Los usuarios pueden hacer preguntas en español simple, y la aplicación generará la consulta SQL apropiada, la ejecutará y mostrará los resultados.
 
+![Terraform 1]()
+![Terraform 1]()
+![Terraform 1]()
+![Terraform 1]()
+![Terraform 1]()
+
+
 ## Características
 
 - **Interfaz en Lenguaje Natural**: Haz preguntas sobre tu base de datos en español simple
