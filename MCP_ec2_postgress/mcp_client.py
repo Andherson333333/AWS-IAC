@@ -66,13 +66,13 @@ class MCPClient:
             conn = psycopg2.connect(self.pg_connection)
             cursor = conn.cursor()
 
-            # Execute the query
+            
             cursor.execute(query)
 
-            # Get the results
+         
             results = cursor.fetchall()
 
-            # Get column names
+        
             column_names = [desc[0] for desc in cursor.description] if cursor.description else []
 
             # Close connection
@@ -198,7 +198,7 @@ class MCPClient:
                 mcp_process.terminate()
                 mcp_process.wait(timeout=5)
 
-# Example of direct use from the command line
+
 if __name__ == "__main__":
     import sys
     import os
