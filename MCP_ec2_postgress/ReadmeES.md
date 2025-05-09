@@ -67,16 +67,21 @@ sudo npm install -g @modelcontextprotocol/server-postgres
 npm list -g @modelcontextprotocol/server-postgres  # Verificar instalación
 ```
 
-### Paso 3: Configurar el Entorno Python
+# Crear un entorno virtual
 
-```bash
+```
 sudo apt install -y python3-venv
+python3 -m venv mcp_env
+```
+# Activar el entorno virtual
+source mcp_env/bin/activate
+```
+# Instalar las dependencias necesarias
 pip install anthropic
 pip install psycopg2-binary
 pip install streamlit
 pip install pandas
 ```
-
 ### Paso 4: Instalar PostgreSQL
 
 ```bash
