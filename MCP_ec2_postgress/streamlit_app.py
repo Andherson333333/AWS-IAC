@@ -19,7 +19,7 @@ Write your question in English and Claude will generate the appropriate SQL quer
 
 # Get credentials (ideally from environment variables or a secure configuration file)
 def load_credentials():
-    # Try to load from environment variables
+   
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     pg_connection = os.environ.get("PG_CONNECTION")
 
@@ -101,13 +101,11 @@ def process_query(question):
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    # Text input for the query
     user_query = st.text_area("Write your query in natural language:",
                               placeholder="Example: How many employees are in each department?",
                               height=100)
 
 with col2:
-    # Example queries
     st.subheader("Example Queries")
     examples = [
         "How many employees are in the Technology department?",
@@ -127,7 +125,7 @@ with col2:
             set_example(example)
             st.rerun()
 
-# Update the text area if an example was selected
+
 if "user_query" in st.session_state:
     user_query = st.session_state.user_query
 
