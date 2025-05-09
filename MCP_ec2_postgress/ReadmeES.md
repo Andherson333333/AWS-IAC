@@ -76,7 +76,6 @@ python3 -m venv mcp_env
 # Activar el entorno virtual
 source mcp_env/bin/activate
 ```
-# Instalar las dependencias necesarias
 pip install anthropic
 pip install psycopg2-binary
 pip install streamlit
