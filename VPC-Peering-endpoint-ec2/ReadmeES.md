@@ -49,9 +49,14 @@ Los EC2 Instance Connect Endpoints representan el enfoque moderno de AWS para ac
 
 ## Arquitectura de Infraestructura
 
-```
+![Diagrama de Arquitectura VPC Peering](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-7.png)
 
-```
+La arquitectura implementada muestra:
+- **VPC-1** (10.1.0.0/16) y **VPC-2** (10.2.0.0/16) en la región us-east-1
+- Subredes públicas y privadas distribuidas en zonas de disponibilidad us-east-1a y us-east-1b
+- Instancias EC2 desplegadas en subredes privadas
+- EC2 Instance Connect Endpoints para acceso seguro
+- Conexión VPC Peering activa permitiendo comunicación directa entre VPCs
 
 ## Requisitos Previos
 
@@ -125,16 +130,25 @@ Los EC2 Instance Connect Endpoints representan el enfoque moderno de AWS para ac
 Después del despliegue exitoso, verificar los siguientes componentes:
 
 1. **Configuración VPC**
+   
+   ![Lista de VPCs](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-5.png)
+   
    - Confirmar que dos VPCs están creadas con bloques CIDR correctos
    - Validar creación de subredes en múltiples zonas de disponibilidad
    - Verificar configuración de tablas de rutas para comunicación inter-VPC
 
 2. **Estado VPC Peering**
+   
+   ![Conexión VPC Peering](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-6.png)
+   
    - Asegurar que el estado de conexión peering muestra como "Active"
    - Confirmar propagación de rutas a tablas de rutas de ambas VPCs
    - Validar que reglas de security groups permiten tráfico requerido
 
 3. **EC2 Instance Connect Endpoints**
+   
+   ![Instancias EC2](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-4.png)
+   
    - Verificar que endpoints están en estado "Available"
    - Confirmar ubicación de endpoints en subredes privadas
    - Revisar configuraciones de security groups asociados
@@ -147,7 +161,17 @@ Después del despliegue exitoso, verificar los siguientes componentes:
 
 #### Verificación de Conectividad Inter-VPC
 
+![Detalles de Instancia VPC-2](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-4.png)
+
 Desde la instancia conectada, probar conectividad de red:
+
+![Prueba de Conectividad Ping](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-2.png)
+
+Como se muestra en la captura, el ping exitoso desde la instancia en VPC-1 (10.1.10.7) hacia la instancia en VPC-2 (10.2.11.104) confirma que:
+- La conexión VPC Peering está funcionando correctamente
+- Las tablas de rutas están configuradas apropiadamente
+- Los security groups permiten el tráfico ICMP entre VPCs
+- La latencia promedio es inferior a 2ms, demostrando la eficiencia de la conexión directa
 
 
 ### Análisis de Red
