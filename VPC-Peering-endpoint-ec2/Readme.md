@@ -119,7 +119,6 @@ The implemented architecture shows:
 ├── security-groups.tf      # Security group definitions
 ├── ec2.tf                  # EC2 instance configurations
 ├── endpoint.tf             # EC2 Instance Connect Endpoints
-├── outputs.tf              # Output values for connectivity
 └── README.md               # This documentation
 ```
 
