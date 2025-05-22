@@ -165,6 +165,8 @@ Después del despliegue exitoso, verificar los siguientes componentes:
 
 Desde la instancia conectada, probar conectividad de red:
 
+![Prueba de Conectividad Ping](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-3.png)
+
 ![Prueba de Conectividad Ping](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Peering-endpoint-ec2/Imagenes/vpc-peerin-2.png)
 
 Como se muestra en la captura, el ping exitoso desde la instancia en VPC-1 (10.1.10.7) hacia la instancia en VPC-2 (10.2.11.104) confirma que:
