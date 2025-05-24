@@ -95,8 +95,9 @@ Este proyecto demuestra la implementación de AWS VPC Endpoints usando Terraform
 - **Security Groups**: Configured for SSH and HTTPS access
 - **Instance Connect Endpoint**: For secure SSH access
 
-## 🧪 Testing Connectivity
+##  Testing Connectivity
 
+![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-1.png)
 ### 1. Connect to EC2 Instance
 ```bash
 # Using EC2 Instance Connect
@@ -108,7 +109,8 @@ aws ec2-instance-connect ssh --instance-id i-xxxxxxxxx --os-user ec2-user
 # List S3 buckets (should work without internet access)
 aws s3 ls
 ```
-![VPC Endpoints](screenshots/vpc-endpoints.png)
+![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-2.png)
+
 
 ### 3. Test SSM Interface Endpoint
 ```bash
@@ -119,13 +121,13 @@ aws ssm get-parameter --name "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm
 nslookup ssm.us-east-1.amazonaws.com
 # Should return private IP (10.x.x.x)
 ```
-![VPC Endpoints](screenshots/vpc-endpoints.png)
+![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-3.png)
 ### 4. Verify No Internet Access
 ```bash
 # This should fail (confirming no NAT Gateway)
 curl -I https://google.com
 ```
-![VPC Endpoints](screenshots/vpc-endpoints.png)
+![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-4.png)
 ##  Cost Optimization
 
 ### Gateway vs Interface Endpoints
