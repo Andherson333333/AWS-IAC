@@ -116,6 +116,7 @@ aws ec2-instance-connect ssh --instance-id i-xxxxxxxxx --os-user ec2-user
 # List S3 buckets (should work without internet access)
 aws s3 ls
 ```
+![VPC Endpoints](screenshots/vpc-endpoints.png)
 
 ### 3. Test SSM Interface Endpoint
 ```bash
@@ -126,13 +127,13 @@ aws ssm get-parameter --name "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm
 nslookup ssm.us-east-1.amazonaws.com
 # Should return private IP (10.x.x.x)
 ```
-
+![VPC Endpoints](screenshots/vpc-endpoints.png)
 ### 4. Verify No Internet Access
 ```bash
 # This should fail (confirming no NAT Gateway)
 curl -I https://google.com
 ```
-
+![VPC Endpoints](screenshots/vpc-endpoints.png)
 ##  Cost Optimization
 
 ### Gateway vs Interface Endpoints
@@ -167,22 +168,6 @@ Total: ~$8-12/month per Interface endpoint
 - **Instance Connect**: Acceso SSH seguro sin bastion hosts
 - **Políticas de endpoint**: Pueden restringir acceso a buckets S3 específicos
 
-## Capturas de Pantalla
-
-### Panel de VPC Endpoints
-![VPC Endpoints](screenshots/vpc-endpoints.png)
-*Muestra tanto Gateway (S3) como Interface (SSM) endpoints*
-
-### Vista del Mapa de Recursos
-![Resource Map](screenshots/resource-map.png)
-*Representación visual de recursos VPC y conexiones*
-
-### Interfaces de Red
-![Network Interfaces](screenshots/network-interfaces.png)
-*ENI creada por el endpoint Interface de SSM*
-
-## Lecciones Aprendidas
-
 ### Gateway vs Interface Endpoints
 
 | Aspecto | Gateway | Interface |
@@ -204,24 +189,3 @@ Total: ~$8-12/month per Interface endpoint
 - [Documentación AWS VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/)
 - [Módulo Terraform AWS VPC](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest)
 - [Precios AWS VPC Endpoint](https://aws.amazon.com/privatelink/pricing/)
-
-## Limpieza
-
-Para destruir todos los recursos:
-```bash
-terraform destroy
-```
-
-** Advertencia**: Esto eliminará permanentemente todos los recursos creados.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
-
-## Contribuyendo
-
-¡Las contribuciones son bienvenidas! Por favor, siéntete libre de enviar un Pull Request.
-
----
-
-**Nota**: Este es un proyecto de demostración para aprender AWS VPC Endpoints. Asegúrate de entender las implicaciones de costo antes de desplegar en entornos de producción.
