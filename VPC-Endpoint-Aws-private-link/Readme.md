@@ -80,13 +80,11 @@ Este proyecto demuestra la implementación de AWS VPC Endpoints usando Terraform
 ├── outputs.tf             # Valores de salida
 ├── user_data.sh           # Script de inicialización para EC2
 ├── README.md              # Este archivo
-└── screenshots/           # Diagramas de arquitectura
-    ├── vpc-endpoints.png
-    ├── resource-map.png
-    └── network-interfaces.png
+└── Imagenes/              # Diagramas de arquitectura
+
 ```
 
-## 🔧 Components
+##  Components
 
 ### VPC Endpoints
 
