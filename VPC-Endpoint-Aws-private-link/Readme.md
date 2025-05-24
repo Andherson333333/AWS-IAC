@@ -46,19 +46,13 @@ Este proyecto demuestra la implementación de AWS VPC Endpoints usando Terraform
 
 ### Despliegue Rápido
 
-1. **Clonar el repositorio**
-   ```bash
-   git clone <repository-url>
-   cd aws-vpc-endpoints-terraform
-   ```
-
-2. **Configurar variables**
+1. **Configurar variables**
    ```bash
    # Editar variables.tf o crear terraform.tfvars
-   echo 'ec2_key_name = "tu-key-pair-name"' > terraform.tfvars
+   echo 'ec2_key_name = "tu-key-pair-name"'
    ```
 
-3. **Desplegar infraestructura**
+2. **Desplegar infraestructura**
    ```bash
    terraform init
    terraform plan
