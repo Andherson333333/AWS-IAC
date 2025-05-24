@@ -122,6 +122,8 @@ nslookup ssm.us-east-1.amazonaws.com
 # Should return private IP (10.x.x.x)
 ```
 ![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-3.png)
+
+![VPC Endpoints](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Endpoint-Aws-private-link/imagenes/vpc-s3-gateway-5.png)
 ### 4. Verify No Internet Access
 ```bash
 # This should fail (confirming no NAT Gateway)
