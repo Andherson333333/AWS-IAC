@@ -1,4 +1,4 @@
-# Cluster EKS con Autoescalado Karpenter
+# Cluster EKS con Autoescalado Karpenter 
 
 Este repositorio contiene la configuración de Terraform para desplegar un cluster Amazon EKS con Karpenter para el aprovisionamiento y escalado automático de nodos.
 
