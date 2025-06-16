@@ -33,7 +33,7 @@ Sus credenciales AWS necesitan permisos para:
 
 ### 2. Actualizar Configuración
 
-Editar `main.tf` variables:
+Editar `customer-gateway-resource.tf` variables:
 
 ```hcl
 # Actualizar IP pública de tu Customer Gateway
@@ -46,7 +46,6 @@ module "ec2_test_server" {
   key_name = "NOMBRE_DE_TU_KEY_PAIR"     # ← Cambiar esto
 }
 ```
-
 ### 3. Desplegar Infraestructura
 
 ```bash
