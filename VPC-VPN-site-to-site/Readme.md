@@ -46,6 +46,8 @@ module "ec2_test_server" {
   key_name = "NOMBRE_DE_TU_KEY_PAIR"     # ← Cambiar esto
 }
 ```
+Revisar las otra parte para editar con la informacion necesaria 
+
 ### 3. Desplegar Infraestructura
 
 ```bash
