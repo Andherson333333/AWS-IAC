@@ -1,9 +1,30 @@
 # AWS Site-to-Site VPN con Terraform y Libreswan
 
+[![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4?style=flat&logo=terraform)](https://terraform.io)
+[![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?style=flat&logo=amazon-aws)](https://aws.amazon.com)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Una implementación lista para producción de AWS Site-to-Site VPN utilizando Terraform para la automatización de infraestructura y Libreswan como Customer Gateway. Esta configuración demuestra cómo conectar redes on-premises de forma segura a AWS VPC utilizando túneles IPSec.
 
+## Índice
+
+- [Arquitectura](#arquitectura)
+- [Características](#características)
+- [Prerrequisitos](#prerrequisitos)
+- [Configuración Inicial](#configuración-inicial)
+- [Despliegue](#despliegue)
+- [Configuración de Libreswan](#configuración-de-libreswan)
+- [Verificación](#verificación)
+- [Componentes de Infraestructura](#componentes-de-infraestructura)
+- [Resolución de Problemas](#resolución-de-problemas)
+- [Estimación de Costos](#estimación-de-costos)
+- [Documentación](#documentación)
+- [Licencia](#licencia)
+
 ## Arquitectura
+
 ![vpn-conect](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-6.png)
+
 ## Características
 
 - **Infraestructura como Código** con módulos de Terraform
@@ -31,6 +52,15 @@ Sus credenciales AWS necesitan permisos para:
 - Dirección IP pública para Customer Gateway
 - Par de claves EC2 en la región objetivo
 
+## Configuración Inicial
+
+### 1. Clonar Repositorio
+
+```bash
+git clone https://github.com/tu-usuario/aws-site-to-site-vpn.git
+cd aws-site-to-site-vpn
+```
+
 ### 2. Actualizar Configuración
 
 Editar `customer-gateway-resource.tf` variables:
@@ -46,7 +76,29 @@ module "ec2_test_server" {
   key_name = "NOMBRE_DE_TU_KEY_PAIR"     # ← Cambiar esto
 }
 ```
-Revisar las otra parte para editar con la informacion necesaria 
+
+**Otras partes para editar:**
+
+#### Región AWS (opcional)
+```hcl
+locals {
+  region = "us-east-1"  # ← Cambiar si usas otra región
+}
+```
+
+#### CIDR de la VPC (opcional)
+```hcl
+locals {
+  vpc_cidr = "10.1.0.0/16"  # ← Cambiar si quieres otro rango
+}
+```
+
+#### Red On-Premises (opcional)
+```hcl
+local_ipv4_network_cidr = "172.31.0.0/16"  # ← Cambiar por tu red actual
+```
+
+## Despliegue
 
 ### 3. Desplegar Infraestructura
 
@@ -211,6 +263,8 @@ ip addr show
 | Instancia EC2 | 1 | Objetivo de prueba (t2.micro) |
 | Security Groups | 1 | Control de acceso de red |
 
+## Resolución de Problemas
+
 ### Comandos de Diagnóstico
 
 ```bash
@@ -226,6 +280,18 @@ sudo ipsec whack --debug-all
 # Reiniciar servicio
 sudo systemctl restart ipsec
 ```
+
+### Problemas Comunes
+
+#### Un Túnel DOWN (Comportamiento Normal)
+- **Síntoma**: Un túnel muestra "Down" mientras el otro está "Up"
+- **Causa**: Comportamiento esperado - solo se necesita un túnel activo
+- **Solución**: No se requiere acción
+
+#### Conectividad Fallida
+- Verificar Security Groups permiten ICMP
+- Confirmar propagación de rutas VGW
+- Revisar configuración de Libreswan
 
 ## Estimación de Costos
 
@@ -243,7 +309,10 @@ sudo systemctl restart ipsec
 - [Documentación de Libreswan](https://libreswan.org/wiki/Main_Page)
 - [Proveedor AWS de Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)
 
-
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+
+---
+
+**Construido para la comunidad AWS**
