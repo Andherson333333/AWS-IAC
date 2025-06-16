@@ -52,49 +52,66 @@ Your AWS credentials need permissions for:
 - Public IP address for Customer Gateway
 - EC2 Key Pair in target region
 
+## Project Structure
+
+```
+aws-site-to-site-vpn/
+├── imagenes/                    # Screenshots for documentation
+├── customer-gateway-resource.tf # Customer Gateway configuration
+├── data.tf                      # Data sources (AMIs, AZs)
+├── ec2.tf                       # Test EC2 instances
+├── local.tf                     # Local variables
+├── output.tf                    # Terraform outputs
+├── provider.tf                  # Provider configuration
+├── sc.tf                        # Security Groups
+├── vpc.tf                       # VPC and subnets configuration
+├── vpn-module.tf               # VPN module and connections
+├── Readme.md                   # Spanish documentation
+├── ReadmeES.md                 # English documentation
+└── LICENSE                     # MIT License
+```
+
 ## Initial Setup
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/aws-site-to-site-vpn.git
-cd aws-site-to-site-vpn
+git clone https://github.com/Andherson333333/AWS-IAC.git
+cd AWS-IAC/VPC-VPN-site-to-site
 ```
 
 ### 2. Update Configuration
 
-Edit `customer-gateway-resource.tf` variables:
+**Main files to edit:**
 
+#### `customer-gateway-resource.tf` (REQUIRED)
 ```hcl
 # Update your Customer Gateway public IP
 resource "aws_customer_gateway" "vyos_lab" {
   ip_address = "YOUR_PUBLIC_IP_HERE"  # ← Change this
 }
+```
 
+#### `ec2.tf` (REQUIRED)
+```hcl
 # Update EC2 key pair
 module "ec2_test_server" {
   key_name = "YOUR_KEY_PAIR_NAME"     # ← Change this
 }
 ```
 
-**Other parts to edit:**
-
-#### AWS Region (optional)
+#### `local.tf` (OPTIONAL)
 ```hcl
+# Change region if needed
 locals {
   region = "us-east-1"  # ← Change if using different region
-}
-```
-
-#### VPC CIDR (optional)
-```hcl
-locals {
   vpc_cidr = "10.1.0.0/16"  # ← Change if you want different range
 }
 ```
 
-#### On-Premises Network (optional)
+#### `vpn-module.tf` (OPTIONAL)
 ```hcl
+# Change on-premises network if needed
 local_ipv4_network_cidr = "172.31.0.0/16"  # ← Change to your current network
 ```
 
