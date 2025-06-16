@@ -3,7 +3,7 @@
 Una implementación lista para producción de AWS Site-to-Site VPN utilizando Terraform para la automatización de infraestructura y Libreswan como Customer Gateway. Esta configuración demuestra cómo conectar redes on-premises de forma segura a AWS VPC utilizando túneles IPSec.
 
 ## Arquitectura
-
+![vpn-conect](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-6.png)
 ## Características
 
 - **Infraestructura como Código** con módulos de Terraform
