@@ -144,15 +144,15 @@ Verificar que las rutas VGW se propagan correctamente a las tablas de enrutamien
 aws ec2 describe-route-tables --query 'RouteTables[*].Routes[?VpcPeeringConnectionId==null]'
 ```
 
-![Salida CLI de Route Tables](docs/images/route-tables-cli.png)
+![Salida CLI de Route Tables](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-5.png)
 
 **Verificación Consola AWS:**
 - Navegar a **VPC** → **Route Tables**
 - Seleccionar tablas de enrutamiento privadas
 - Verificar que la ruta `172.31.0.0/16` apunte al VGW con **Propagated = Yes**
 
-![Route Table GUI - us-east-1a](docs/images/route-table-private-1a.png)
-![Route Table GUI - us-east-1b](docs/images/route-table-private-1b.png)
+![Route Table GUI - us-east-1a](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-3.png)
+![Route Table GUI - us-east-1b](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-4.png)
 
 ### 2. Verificar Estado del Túnel VPN
 
@@ -161,7 +161,7 @@ aws ec2 describe-route-tables --query 'RouteTables[*].Routes[?VpcPeeringConnecti
 2. Verificar que al menos un **Tunnel Status** = **UP**
 3. Verificar que **Customer Gateway Address** coincida con tu IP pública
 
-![Estado de Conexión VPN](docs/images/vpn-connection-status.png)
+![Estado de Conexión VPN](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-2.png)
 
 ### 3. Probar Conectividad End-to-End
 
@@ -170,7 +170,7 @@ aws ec2 describe-route-tables --query 'RouteTables[*].Routes[?VpcPeeringConnecti
 ping 10.1.1.232
 ```
 
-![Prueba de Ping Exitosa](docs/images/ping-test-success.png)
+![Prueba de Ping Exitosa](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-VPN-site-to-site/imagenes/vpn-site-to-site-1.png)
 
 ### 4. Verificar Estado de Libreswan
 
