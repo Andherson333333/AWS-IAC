@@ -52,49 +52,66 @@ Sus credenciales AWS necesitan permisos para:
 - Dirección IP pública para Customer Gateway
 - Par de claves EC2 en la región objetivo
 
+## Estructura del Proyecto
+
+```
+aws-site-to-site-vpn/
+├── imagenes/                    # Capturas de pantalla para documentación
+├── customer-gateway-resource.tf # Configuración del Customer Gateway
+├── data.tf                      # Data sources (AMIs, AZs)
+├── ec2.tf                       # Instancias EC2 de prueba
+├── local.tf                     # Variables locales
+├── output.tf                    # Outputs de Terraform
+├── provider.tf                  # Configuración de providers
+├── sc.tf                        # Security Groups
+├── vpc.tf                       # Configuración de VPC y subnets
+├── vpn-module.tf               # Módulo VPN y conexiones
+├── Readme.md                   # Documentación en español
+├── ReadmeES.md                 # Documentación en inglés
+└── LICENSE                     # Licencia MIT
+```
+
 ## Configuración Inicial
 
 ### 1. Clonar Repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/aws-site-to-site-vpn.git
-cd aws-site-to-site-vpn
+git clone https://github.com/Andherson333333/AWS-IAC.git
+cd AWS-IAC/VPC-VPN-site-to-site
 ```
 
 ### 2. Actualizar Configuración
 
-Editar `customer-gateway-resource.tf` variables:
+**Archivos principales a editar:**
 
+#### `customer-gateway-resource.tf` (OBLIGATORIO)
 ```hcl
 # Actualizar IP pública de tu Customer Gateway
 resource "aws_customer_gateway" "vyos_lab" {
   ip_address = "TU_IP_PUBLICA_AQUI"  # ← Cambiar esto
 }
+```
 
+#### `ec2.tf` (OBLIGATORIO)
+```hcl
 # Actualizar par de claves EC2
 module "ec2_test_server" {
   key_name = "NOMBRE_DE_TU_KEY_PAIR"     # ← Cambiar esto
 }
 ```
 
-**Otras partes para editar:**
-
-#### Región AWS (opcional)
+#### `local.tf` (OPCIONAL)
 ```hcl
+# Cambiar región si es necesario
 locals {
   region = "us-east-1"  # ← Cambiar si usas otra región
-}
-```
-
-#### CIDR de la VPC (opcional)
-```hcl
-locals {
   vpc_cidr = "10.1.0.0/16"  # ← Cambiar si quieres otro rango
 }
 ```
 
-#### Red On-Premises (opcional)
+#### `vpn-module.tf` (OPCIONAL)
 ```hcl
+# Cambiar red on-premises si es necesario
 local_ipv4_network_cidr = "172.31.0.0/16"  # ← Cambiar por tu red actual
 ```
 
