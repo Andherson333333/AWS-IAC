@@ -112,7 +112,7 @@ El Transit Gateway utiliza:
 
 ## Propagación de Rutas
 
-![Propagación de Rutas]()
+![Propagación de Rutas](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-5.png)
 
 Prueba de Conectividad
 
