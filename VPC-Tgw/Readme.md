@@ -37,14 +37,16 @@ La solución despliega:
 
 ## Inicio Rápido
 
-
-# Inicializar Terraform
+ Inicializar Terraform
+```
 terraform init
-
-# Revisar plan de ejecución
+```
+ Revisar plan de ejecución
+```
 terraform plan
-
-# Aplicar configuración
+```
+ Aplicar configuración
+```
 terraform apply
 ```
 
@@ -79,8 +81,7 @@ vpc-tgw/
 ├── tgw.tf               # Módulo Transit Gateway con attachments
 ├── tgw-rt-private.tf    # Configuración dinámica de rutas privadas
 ├── README.md            # Este archivo
-└── docs/
-    └── images/          # Imágenes de documentación
+
 ```
 
 ## Requisitos
