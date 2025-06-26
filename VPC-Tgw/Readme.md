@@ -27,7 +27,7 @@ Este proyecto implementa una arquitectura de red Full Mesh utilizando AWS Transi
 
 ## Arquitectura
 
-![Diagrama de Arquitectura](docs/images/architecture-diagram.png)
+![Diagrama de Arquitectura](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-10.png)
 
 La solución despliega:
 - 3 VPCs con subredes públicas y privadas
