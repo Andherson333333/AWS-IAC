@@ -62,11 +62,10 @@ terraform apply
 - Soporte DNS habilitado
 - Asociación de tabla de rutas por defecto
 
-![Tablas de Rutas VPC](docs/images/vpc-route-tables.png)
+![Tablas de Rutas VPC](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-2.png)
+![Tablas de Rutas VPC](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-3.png)
 
-## Prueba de Conectividad
 
-![Prueba de Conectividad](docs/images/connectivity-test.png)
 
 Ejemplo de conectividad exitosa entre VPCs:
 - Origen: Instancia EC2 en VPC-1 (10.1.7.93)
@@ -104,7 +103,7 @@ aws ec2 describe-route-tables --filters "Name=route.transit-gateway-id,Values=<t
 
 ## Configuración del Transit Gateway
 
-![Detalles del Transit Gateway](docs/images/tgw-details.png)
+![Detalles del Transit Gateway](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-4.png)
 
 El Transit Gateway utiliza:
 - Tabla de rutas por defecto para todos los attachments
@@ -113,7 +112,15 @@ El Transit Gateway utiliza:
 
 ## Propagación de Rutas
 
-![Propagación de Rutas](docs/images/route-propagation.png)
+![Propagación de Rutas]()
+
+Prueba de Conectividad
+
+![Prueba de Conectividad](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-9.png)
+![Prueba de Conectividad](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-6.png)
+![Prueba de Conectividad](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-7.png)
+![Prueba de Conectividad](https://github.com/Andherson333333/AWS-IAC/blob/main/VPC-Tgw/imagenes/vpc-tgw-8.png)
+
 
 Las rutas se propagan automáticamente entre todas las VPCs a través de la tabla de rutas por defecto del Transit Gateway.
 
